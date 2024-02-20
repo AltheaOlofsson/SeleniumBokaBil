@@ -69,19 +69,24 @@ CreateListofLicenceNumbers
     @{productTitles}     Create List
     
     FOR    ${locatorIndex}    IN RANGE    1    100
-        @{WebpageProducts}       Get WebElements     //td[@id='licenseNumber${locatorIndex}']
+        ${element_present}=    Run Keyword And Return Status    Element Should Be Visible    //td[@id='licenseNumber${locatorIndex}']
+        IF    ${element_present} == True
+            @{WebpageProducts}       Get WebElements     //td[@id='licenseNumber${locatorIndex}']
+
             FOR    ${element}    IN    @{WebpageProducts}
                 ${product_title}     Get Text    ${element}
                 Append To List     ${productTitles}       ${product_title}
-
-            END
-    END
+                END
+        ELSE
+        BREAK
+        END
+        END
     RETURN      ${productTitles}
 
 
 
 
-CancelShouldProduceAlert
+CancelAndVerifyBooking
     [Documentation]
     [Tags]
     ${LoginStatus}=     Run Keyword And Return Status    CheckIfLoggedIn    ${LoggedIn}

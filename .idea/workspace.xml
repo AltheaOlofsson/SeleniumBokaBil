@@ -5,30 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="717f8d15-df9c-4b85-b6fd-df4d13b8a589" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/log.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/output.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/report.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-9.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BokaBil.robot" beforeDir="false" afterPath="$PROJECT_DIR$/BokaBil.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BokaBilResources.robot" beforeDir="false" afterPath="$PROJECT_DIR$/BokaBilResources.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/log.html" beforeDir="false" afterPath="$PROJECT_DIR$/log/log.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/output.xml" beforeDir="false" afterPath="$PROJECT_DIR$/log/output.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/log/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/log/report.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,19 +31,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Robot Framework.run [BookCarTest].executor": "Run",
-    "Robot Framework.run [BookCarTodayWhenNotLoggedIn].executor": "Run",
-    "Robot Framework.run [BookCarWhenLoggedIn].executor": "Run",
-    "Robot Framework.run [CancelBookingOfCar].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "BokaBil",
-    "last_opened_file_path": "C:/Users/Althea/Desktop/Selenium BokaBil/SeleniumBokaBil"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Robot Framework.run [BookCarTest].executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.run [BookCarTodayWhenNotLoggedIn].executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.run [BookCarWhenLoggedIn].executor&quot;: &quot;Run&quot;,
+    &quot;Robot Framework.run [CancelBookingOfCar].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;BokaBil&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Althea/Desktop/Selenium BokaBil/SeleniumBokaBil&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>

@@ -16,7 +16,7 @@ BookCarWhenLoggedIn
     LogOut
 
 CancelBookingOfCar
-    CancelShouldProduceAlert
+    CancelAndVerifyBooking
 
 
 

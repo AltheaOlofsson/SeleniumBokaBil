@@ -1,266 +1,360 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-02-20T09:57:30.736294" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-02-20T15:47:49.191815" rpa="false" schemaversion="5">
 <suite id="s1" name="BokaBil" source="C:\Users\Althea\Desktop\Selenium BokaBil\SeleniumBokaBil\BokaBil.robot">
 <kw name="SetupBrowser" owner="BokaBilResources" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:31.242733" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
+<msg time="2024-02-20T15:47:49.784916" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
 <arg>browser=Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-02-20T09:57:31.241564" elapsed="2.825188"/>
+<status status="PASS" start="2024-02-20T15:47:49.784837" elapsed="2.895689"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:34.066839" level="INFO">Opening url 'https://rental3.infotiv.net/'</msg>
+<msg time="2024-02-20T15:47:52.681646" level="INFO">Opening url 'https://rental3.infotiv.net/'</msg>
 <arg>${urlRental}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-02-20T09:57:34.066839" elapsed="0.267257"/>
+<status status="PASS" start="2024-02-20T15:47:52.680526" elapsed="0.221151"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>//h1[@id='title']</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-02-20T09:57:34.334096" elapsed="0.079318"/>
+<status status="PASS" start="2024-02-20T15:47:52.901677" elapsed="0.081203"/>
 </kw>
 <arg>${urlRental}</arg>
 <tag>Setup</tag>
 <doc>Opens Chrome</doc>
-<status status="PASS" start="2024-02-20T09:57:31.239262" elapsed="3.175209"/>
+<status status="PASS" start="2024-02-20T15:47:49.781479" elapsed="3.201401"/>
 </kw>
 <test id="s1-t1" name="BookCarWhenLoggedIn" line="11">
 <kw name="LogInRental" owner="BokaBilResources">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:34.418009" level="INFO">Typing text 'robot.selenium@robot.se' into text field '//input[@id='email']'.</msg>
+<msg time="2024-02-20T15:47:52.986175" level="INFO">Typing text 'robot.selenium@robot.se' into text field '//input[@id='email']'.</msg>
 <arg>//input[@id='email']</arg>
 <arg>${userEmail}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:34.416906" elapsed="0.620602"/>
+<status status="PASS" start="2024-02-20T15:47:52.985077" elapsed="0.607346"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:35.038543" level="INFO">Typing text '123Robot' into text field '//input[@id='password']'.</msg>
+<msg time="2024-02-20T15:47:53.593606" level="INFO">Typing text '123Robot' into text field '//input[@id='password']'.</msg>
 <arg>//input[@id='password']</arg>
 <arg>${userPassword}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:35.037508" elapsed="0.399849"/>
+<status status="PASS" start="2024-02-20T15:47:53.592423" elapsed="0.359305"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:35.439708" level="INFO">Clicking element '//button[@id='login']'.</msg>
+<msg time="2024-02-20T15:47:53.952978" level="INFO">Clicking element '//button[@id='login']'.</msg>
 <arg>//button[@id='login']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:35.438558" elapsed="0.395838"/>
+<status status="PASS" start="2024-02-20T15:47:53.951790" elapsed="0.399087"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>//label[@id='welcomePhrase']</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-02-20T09:57:35.835649" elapsed="0.127963"/>
+<status status="PASS" start="2024-02-20T15:47:54.352047" elapsed="0.112532"/>
 </kw>
 <arg>${userEmail}</arg>
 <arg>${userPassword}</arg>
 <tag>Login</tag>
 <doc>Logs in on Rental Website</doc>
-<status status="PASS" start="2024-02-20T09:57:34.415683" elapsed="1.548996"/>
+<status status="PASS" start="2024-02-20T15:47:52.983965" elapsed="1.480614"/>
 </kw>
 <kw name="AttemptToBookVolvo" owner="BokaBilResources">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:35.968291" level="INFO">Clicking element '//button[@id='continue']'.</msg>
+<msg time="2024-02-20T15:47:54.468178" level="INFO">Clicking element '//button[@id='continue']'.</msg>
 <arg>//button[@id='continue']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:35.967228" elapsed="0.624533"/>
+<status status="PASS" start="2024-02-20T15:47:54.466880" elapsed="0.553950"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>//h1[@id='questionText']</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-02-20T09:57:36.591850" elapsed="0.055172"/>
+<status status="PASS" start="2024-02-20T15:47:55.020943" elapsed="0.078336"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:36.647022" level="INFO">Clicking element '//tbody/tr[30]/td[5]/form[1]/input[4]'.</msg>
+<msg time="2024-02-20T15:47:55.101622" level="INFO">Clicking element '//tbody/tr[30]/td[5]/form[1]/input[4]'.</msg>
 <arg>//tbody/tr[30]/td[5]/form[1]/input[4]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:36.647022" elapsed="0.207598"/>
+<status status="PASS" start="2024-02-20T15:47:55.100372" elapsed="0.259479"/>
 </kw>
 <tag>BookCar</tag>
 <doc>Attempt to book volvoXC90</doc>
-<status status="PASS" start="2024-02-20T09:57:35.965882" elapsed="0.888738"/>
+<status status="PASS" start="2024-02-20T15:47:54.465782" elapsed="0.894069"/>
 </kw>
 <kw name="FillInBooking" owner="BokaBilResources">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>//h1[@id='questionText']</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-02-20T09:57:36.855767" elapsed="0.046103"/>
+<status status="PASS" start="2024-02-20T15:47:55.361006" elapsed="0.041199"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:36.903035" level="INFO">Typing text '5555777733331111' into text field '//input[@id='cardNum']'.</msg>
+<msg time="2024-02-20T15:47:55.403409" level="INFO">Typing text '5555777733331111' into text field '//input[@id='cardNum']'.</msg>
 <arg>//input[@id='cardNum']</arg>
 <arg>5555777733331111</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:36.901870" elapsed="0.414745"/>
+<status status="PASS" start="2024-02-20T15:47:55.402205" elapsed="0.396885"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:37.317934" level="INFO">Typing text 'Robot Selenium' into text field '//input[@id='fullName']'.</msg>
+<msg time="2024-02-20T15:47:55.801726" level="INFO">Typing text 'Robot Selenium' into text field '//input[@id='fullName']'.</msg>
 <arg>//input[@id='fullName']</arg>
 <arg>Robot Selenium</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:37.316615" elapsed="0.403725"/>
+<status status="PASS" start="2024-02-20T15:47:55.800461" elapsed="0.438711"/>
 </kw>
 <kw name="Select From List By Label" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:37.721360" level="INFO">Selecting options from selection list '//select[@title='Month']' by label 5.</msg>
+<msg time="2024-02-20T15:47:56.241485" level="INFO">Selecting options from selection list '//select[@title='Month']' by label 5.</msg>
 <arg>//select[@title='Month']</arg>
 <arg>5</arg>
 <doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="PASS" start="2024-02-20T09:57:37.721360" elapsed="0.217059"/>
+<status status="PASS" start="2024-02-20T15:47:56.240368" elapsed="0.285850"/>
 </kw>
 <kw name="Select From List By Label" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:37.940039" level="INFO">Selecting options from selection list '//select[@title='Year']' by label 2025.</msg>
+<msg time="2024-02-20T15:47:56.528421" level="INFO">Selecting options from selection list '//select[@title='Year']' by label 2025.</msg>
 <arg>//select[@title='Year']</arg>
 <arg>2025</arg>
 <doc>Selects options from selection list ``locator`` by ``labels``.</doc>
-<status status="PASS" start="2024-02-20T09:57:37.938419" elapsed="0.246438"/>
+<status status="PASS" start="2024-02-20T15:47:56.527426" elapsed="0.248164"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:38.186003" level="INFO">Typing text '888' into text field '//input[@id='cvc']'.</msg>
+<msg time="2024-02-20T15:47:56.776741" level="INFO">Typing text '888' into text field '//input[@id='cvc']'.</msg>
 <arg>//input[@id='cvc']</arg>
 <arg>888</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:38.184857" elapsed="0.322141"/>
+<status status="PASS" start="2024-02-20T15:47:56.776741" elapsed="0.317631"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:38.509315" level="INFO">Clicking element '//button[@id='confirm']'.</msg>
+<msg time="2024-02-20T15:47:57.096891" level="INFO">Clicking element '//button[@id='confirm']'.</msg>
 <arg>//button[@id='confirm']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:38.508175" elapsed="0.270006"/>
+<status status="PASS" start="2024-02-20T15:47:57.095567" elapsed="0.283808"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>//h1[@id='questionTextSmall']</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-02-20T09:57:38.779317" elapsed="0.090905"/>
+<status status="PASS" start="2024-02-20T15:47:57.379595" elapsed="0.107793"/>
 </kw>
 <tag>Fill in form</tag>
 <doc>Fill in the form to book a car</doc>
-<status status="PASS" start="2024-02-20T09:57:36.854620" elapsed="2.016647"/>
+<status status="PASS" start="2024-02-20T15:47:55.359851" elapsed="2.128784"/>
 </kw>
 <kw name="VerifyCarToBeBooked" owner="BokaBilResources">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:38.873917" level="INFO">Clicking element '//form[@name='logOut']//button[@id='mypage']'.</msg>
+<msg time="2024-02-20T15:47:57.492569" level="INFO">Clicking element '//form[@name='logOut']//button[@id='mypage']'.</msg>
 <arg>//form[@name='logOut']//button[@id='mypage']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:38.872687" elapsed="0.271873"/>
+<status status="PASS" start="2024-02-20T15:47:57.491287" elapsed="0.256365"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>//h1[@id='historyText']</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-02-20T09:57:39.145705" elapsed="0.078751"/>
+<status status="PASS" start="2024-02-20T15:47:57.747652" elapsed="0.094236"/>
 </kw>
 <kw name="CreateListofLicenceNumbers" owner="BokaBilResources">
 <kw name="Create List" owner="BuiltIn">
-<msg time="2024-02-20T09:57:39.228420" level="INFO">@{productTitles} = [ ]</msg>
+<msg time="2024-02-20T15:47:57.845659" level="INFO">@{productTitles} = [ ]</msg>
 <var>@{productTitles}</var>
 <doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2024-02-20T09:57:39.227249" elapsed="0.001231"/>
+<status status="PASS" start="2024-02-20T15:47:57.844375" elapsed="0.001284"/>
 </kw>
 <for flavor="IN RANGE">
 <iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-02-20T15:47:57.930958" level="INFO">Element '//td[@id='licenseNumber1']' is displayed.</msg>
+<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-20T15:47:57.849367" elapsed="0.082826"/>
+</kw>
+<msg time="2024-02-20T15:47:57.932193" level="INFO">${element_present} = True</msg>
+<var>${element_present}</var>
+<arg>Element Should Be Visible</arg>
+<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-02-20T15:47:57.848121" elapsed="0.085118"/>
+</kw>
+<if>
+<branch type="IF" condition="${element_present} == True">
 <kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:39.278766" level="INFO">@{WebpageProducts} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="9747e04f9290b1c96d2621d1346f06e7", element="8089A4F73D5DA0E5A0A5EF7BF1E09C81_element_131")&gt; ]</msg>
+<msg time="2024-02-20T15:47:57.962533" level="INFO">@{WebpageProducts} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="d4700765e41484ac2400e6235c538226", element="CC339A8F8B7A69B620D761BC3EB6B7DB_element_130")&gt; ]</msg>
 <var>@{WebpageProducts}</var>
 <arg>//td[@id='licenseNumber${locatorIndex}']</arg>
 <doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:39.231879" elapsed="0.047922"/>
+<status status="PASS" start="2024-02-20T15:47:57.934639" elapsed="0.029146"/>
 </kw>
 <for flavor="IN">
 <iter>
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:39.328671" level="INFO">${product_title} = BBE465</msg>
+<msg time="2024-02-20T15:47:58.014024" level="INFO">${product_title} = BBE465</msg>
 <var>${product_title}</var>
 <arg>${element}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:39.281209" elapsed="0.049082"/>
+<status status="PASS" start="2024-02-20T15:47:57.966238" elapsed="0.047786"/>
 </kw>
 <kw name="Append To List" owner="Collections">
 <arg>${productTitles}</arg>
 <arg>${product_title}</arg>
 <doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2024-02-20T09:57:39.331480" elapsed="0.001261"/>
+<status status="PASS" start="2024-02-20T15:47:58.015249" elapsed="0.001321"/>
 </kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="9747e04f9290b1c96d2621d1346f06e7", element="8089A4F73D5DA0E5A0A5EF7BF1E09C81_element_131")&gt;</var>
-<status status="PASS" start="2024-02-20T09:57:39.281022" elapsed="0.052765"/>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d4700765e41484ac2400e6235c538226", element="CC339A8F8B7A69B620D761BC3EB6B7DB_element_130")&gt;</var>
+<status status="PASS" start="2024-02-20T15:47:57.964995" elapsed="0.051575"/>
 </iter>
 <var>${element}</var>
 <value>@{WebpageProducts}</value>
-<status status="PASS" start="2024-02-20T09:57:39.279981" elapsed="0.053954"/>
+<status status="PASS" start="2024-02-20T15:47:57.963785" elapsed="0.054024"/>
 </for>
+<status status="PASS" start="2024-02-20T15:47:57.933441" elapsed="0.084368"/>
+</branch>
+<branch type="ELSE">
+<break>
+<status status="NOT RUN" start="2024-02-20T15:47:58.019045" elapsed="0.000000"/>
+</break>
+<status status="NOT RUN" start="2024-02-20T15:47:58.017809" elapsed="0.001236"/>
+</branch>
+<status status="PASS" start="2024-02-20T15:47:57.933441" elapsed="0.085604"/>
+</if>
 <var name="${locatorIndex}">1</var>
-<status status="PASS" start="2024-02-20T09:57:39.230680" elapsed="0.104371"/>
+<status status="PASS" start="2024-02-20T15:47:57.848121" elapsed="0.170924"/>
 </iter>
 <iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-02-20T15:47:58.098135" level="INFO">Element '//td[@id='licenseNumber2']' is displayed.</msg>
+<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-20T15:47:58.022728" elapsed="0.076693"/>
+</kw>
+<msg time="2024-02-20T15:47:58.100594" level="INFO">${element_present} = True</msg>
+<var>${element_present}</var>
+<arg>Element Should Be Visible</arg>
+<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-02-20T15:47:58.021520" elapsed="0.079140"/>
+</kw>
+<if>
+<branch type="IF" condition="${element_present} == True">
 <kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:39.375750" level="INFO">@{WebpageProducts} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="9747e04f9290b1c96d2621d1346f06e7", element="8089A4F73D5DA0E5A0A5EF7BF1E09C81_element_132")&gt; ]</msg>
+<msg time="2024-02-20T15:47:58.132945" level="INFO">@{WebpageProducts} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="d4700765e41484ac2400e6235c538226", element="CC339A8F8B7A69B620D761BC3EB6B7DB_element_131")&gt; ]</msg>
 <var>@{WebpageProducts}</var>
 <arg>//td[@id='licenseNumber${locatorIndex}']</arg>
 <doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:39.336299" elapsed="0.039451"/>
+<status status="PASS" start="2024-02-20T15:47:58.103141" elapsed="0.029804"/>
 </kw>
 <for flavor="IN">
 <iter>
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:39.395824" level="INFO">${product_title} = BDE463</msg>
+<msg time="2024-02-20T15:47:58.166540" level="INFO">${product_title} = BDE463</msg>
 <var>${product_title}</var>
 <arg>${element}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:39.376866" elapsed="0.020015"/>
+<status status="PASS" start="2024-02-20T15:47:58.134989" elapsed="0.032808"/>
 </kw>
 <kw name="Append To List" owner="Collections">
 <arg>${productTitles}</arg>
 <arg>${product_title}</arg>
 <doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2024-02-20T09:57:39.396881" elapsed="0.001092"/>
+<status status="PASS" start="2024-02-20T15:47:58.168575" elapsed="0.000784"/>
 </kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="9747e04f9290b1c96d2621d1346f06e7", element="8089A4F73D5DA0E5A0A5EF7BF1E09C81_element_132")&gt;</var>
-<status status="PASS" start="2024-02-20T09:57:39.376866" elapsed="0.021107"/>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d4700765e41484ac2400e6235c538226", element="CC339A8F8B7A69B620D761BC3EB6B7DB_element_131")&gt;</var>
+<status status="PASS" start="2024-02-20T15:47:58.134770" elapsed="0.035832"/>
 </iter>
 <var>${element}</var>
 <value>@{WebpageProducts}</value>
-<status status="PASS" start="2024-02-20T09:57:39.376866" elapsed="0.021107"/>
+<status status="PASS" start="2024-02-20T15:47:58.133730" elapsed="0.036872"/>
 </for>
+<status status="PASS" start="2024-02-20T15:47:58.101833" elapsed="0.070013"/>
+</branch>
+<branch type="ELSE">
+<break>
+<status status="NOT RUN" start="2024-02-20T15:47:58.172997" elapsed="0.000000"/>
+</break>
+<status status="NOT RUN" start="2024-02-20T15:47:58.171846" elapsed="0.002371"/>
+</branch>
+<status status="PASS" start="2024-02-20T15:47:58.101701" elapsed="0.072586"/>
+</if>
 <var name="${locatorIndex}">2</var>
-<status status="PASS" start="2024-02-20T09:57:39.336134" elapsed="0.061839"/>
+<status status="PASS" start="2024-02-20T15:47:58.020282" elapsed="0.154005"/>
 </iter>
 <iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-02-20T15:47:58.256363" level="INFO">Element '//td[@id='licenseNumber3']' is displayed.</msg>
+<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-20T15:47:58.177856" elapsed="0.078507"/>
+</kw>
+<msg time="2024-02-20T15:47:58.256363" level="INFO">${element_present} = True</msg>
+<var>${element_present}</var>
+<arg>Element Should Be Visible</arg>
+<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-02-20T15:47:58.176708" elapsed="0.080657"/>
+</kw>
+<if>
+<branch type="IF" condition="${element_present} == True">
 <kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:39.422994" level="INFO">@{WebpageProducts} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="9747e04f9290b1c96d2621d1346f06e7", element="8089A4F73D5DA0E5A0A5EF7BF1E09C81_element_133")&gt; ]</msg>
+<msg time="2024-02-20T15:47:58.276776" level="INFO">@{WebpageProducts} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="d4700765e41484ac2400e6235c538226", element="CC339A8F8B7A69B620D761BC3EB6B7DB_element_132")&gt; ]</msg>
 <var>@{WebpageProducts}</var>
 <arg>//td[@id='licenseNumber${locatorIndex}']</arg>
 <doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:39.399032" elapsed="0.023962"/>
+<status status="PASS" start="2024-02-20T15:47:58.258485" elapsed="0.018412"/>
 </kw>
 <for flavor="IN">
 <iter>
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:39.442951" level="INFO">${product_title} = JKI321</msg>
+<msg time="2024-02-20T15:47:58.296733" level="INFO">${product_title} = JKI321</msg>
 <var>${product_title}</var>
 <arg>${element}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:39.424087" elapsed="0.019929"/>
+<status status="PASS" start="2024-02-20T15:47:58.278107" elapsed="0.020069"/>
 </kw>
 <kw name="Append To List" owner="Collections">
 <arg>${productTitles}</arg>
 <arg>${product_title}</arg>
 <doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2024-02-20T09:57:39.444016" elapsed="0.001100"/>
+<status status="PASS" start="2024-02-20T15:47:58.298176" elapsed="0.001113"/>
 </kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="9747e04f9290b1c96d2621d1346f06e7", element="8089A4F73D5DA0E5A0A5EF7BF1E09C81_element_133")&gt;</var>
-<status status="PASS" start="2024-02-20T09:57:39.424087" elapsed="0.021029"/>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="d4700765e41484ac2400e6235c538226", element="CC339A8F8B7A69B620D761BC3EB6B7DB_element_132")&gt;</var>
+<status status="PASS" start="2024-02-20T15:47:58.278107" elapsed="0.021182"/>
 </iter>
 <var>${element}</var>
 <value>@{WebpageProducts}</value>
-<status status="PASS" start="2024-02-20T09:57:39.422994" elapsed="0.022122"/>
+<status status="PASS" start="2024-02-20T15:47:58.276897" elapsed="0.022392"/>
 </for>
+<status status="PASS" start="2024-02-20T15:47:58.257482" elapsed="0.042944"/>
+</branch>
+<branch type="ELSE">
+<break>
+<status status="NOT RUN" start="2024-02-20T15:47:58.300426" elapsed="0.000000"/>
+</break>
+<status status="NOT RUN" start="2024-02-20T15:47:58.300426" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-02-20T15:47:58.257482" elapsed="0.042944"/>
+</if>
 <var name="${locatorIndex}">3</var>
-<status status="PASS" start="2024-02-20T09:57:39.399032" elapsed="0.046084"/>
+<status status="PASS" start="2024-02-20T15:47:58.175543" elapsed="0.125975"/>
 </iter>
 <iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2024-02-20T15:47:58.540860" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-19.png"&gt;&lt;img src="selenium-screenshot-19.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-02-20T15:47:58.540945" level="FAIL">Element with locator '//td[@id='licenseNumber4']' not found.</msg>
+<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-02-20T15:47:58.302807" elapsed="0.244718">Element with locator '//td[@id='licenseNumber4']' not found.</status>
+</kw>
+<msg time="2024-02-20T15:47:58.547525" level="INFO">${element_present} = False</msg>
+<var>${element_present}</var>
+<arg>Element Should Be Visible</arg>
+<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2024-02-20T15:47:58.301621" elapsed="0.245904"/>
+</kw>
+<if>
+<branch type="IF" condition="${element_present} == True">
 <kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:39.470430" level="INFO">@{WebpageProducts} = [ ]</msg>
 <var>@{WebpageProducts}</var>
 <arg>//td[@id='licenseNumber${locatorIndex}']</arg>
 <doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:39.446176" elapsed="0.024254"/>
+<status status="NOT RUN" start="2024-02-20T15:47:58.548718" elapsed="0.000000"/>
 </kw>
 <for flavor="IN">
 <iter>
@@ -268,3107 +362,82 @@
 <var>${product_title}</var>
 <arg>${element}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:39.472693" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-02-20T15:47:58.549967" elapsed="0.000000"/>
 </kw>
 <kw name="Append To List" owner="Collections">
 <arg>${productTitles}</arg>
 <arg>${product_title}</arg>
 <doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:39.472693" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-02-20T15:47:58.549967" elapsed="0.001187"/>
 </kw>
 <var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:39.471540" elapsed="0.001153"/>
+<status status="NOT RUN" start="2024-02-20T15:47:58.549967" elapsed="0.001187"/>
 </iter>
 <var>${element}</var>
 <value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:39.471540" elapsed="0.002312"/>
+<status status="NOT RUN" start="2024-02-20T15:47:58.548718" elapsed="0.002436"/>
 </for>
+<status status="NOT RUN" start="2024-02-20T15:47:58.548718" elapsed="0.002436"/>
+</branch>
+<branch type="ELSE">
+<break>
+<status status="PASS" start="2024-02-20T15:47:58.551154" elapsed="0.001091"/>
+</break>
+<status status="PASS" start="2024-02-20T15:47:58.551154" elapsed="0.001190"/>
+</branch>
+<status status="PASS" start="2024-02-20T15:47:58.548611" elapsed="0.003733"/>
+</if>
 <var name="${locatorIndex}">4</var>
-<status status="PASS" start="2024-02-20T09:57:39.446176" elapsed="0.027676"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:39.500340" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:39.474919" elapsed="0.026431"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:39.502679" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:39.503880" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:39.501513" elapsed="0.002367"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:39.501513" elapsed="0.002367"/>
-</for>
-<var name="${locatorIndex}">5</var>
-<status status="PASS" start="2024-02-20T09:57:39.473852" elapsed="0.031168"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:39.531310" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:39.506156" elapsed="0.026249"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:39.534572" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:39.534572" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:39.533530" elapsed="0.002419"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:39.532405" elapsed="0.003622"/>
-</for>
-<var name="${locatorIndex}">6</var>
-<status status="PASS" start="2024-02-20T09:57:39.505020" elapsed="0.031007"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:39.562602" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:39.537122" elapsed="0.025480"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:39.564851" elapsed="0.000053"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:39.564904" elapsed="0.001076"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:39.563803" elapsed="0.002232"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:39.562602" elapsed="0.003433"/>
-</for>
-<var name="${locatorIndex}">7</var>
-<status status="PASS" start="2024-02-20T09:57:39.537122" elapsed="0.028913"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:39.592089" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:39.568251" elapsed="0.024977"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:39.594375" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:39.595508" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:39.594375" elapsed="0.001133"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:39.593228" elapsed="0.003412"/>
-</for>
-<var name="${locatorIndex}">8</var>
-<status status="PASS" start="2024-02-20T09:57:39.567168" elapsed="0.029472"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:39.623922" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:39.597769" elapsed="0.026153"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:39.625053" elapsed="0.001133"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:39.626186" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:39.625053" elapsed="0.002265"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:39.623922" elapsed="0.003396"/>
-</for>
-<var name="${locatorIndex}">9</var>
-<status status="PASS" start="2024-02-20T09:57:39.597769" elapsed="0.029549"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:39.652148" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:39.628449" elapsed="0.023699"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:39.653205" elapsed="0.001053"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:39.654258" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:39.653205" elapsed="0.001053"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:39.653205" elapsed="0.001053"/>
-</for>
-<var name="${locatorIndex}">10</var>
-<status status="PASS" start="2024-02-20T09:57:39.628449" elapsed="0.026811"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:39.680603" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:39.655313" elapsed="0.026453"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:39.682890" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:39.683957" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:39.682890" elapsed="0.001067"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:39.681766" elapsed="0.003190"/>
-</for>
-<var name="${locatorIndex}">11</var>
-<status status="PASS" start="2024-02-20T09:57:39.655313" elapsed="0.029643"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:39.710853" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:39.686023" elapsed="0.024830"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:39.713109" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:39.714306" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:39.711978" elapsed="0.002328"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:39.711978" elapsed="0.003512"/>
-</for>
-<var name="${locatorIndex}">12</var>
-<status status="PASS" start="2024-02-20T09:57:39.684956" elapsed="0.030534"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:39.742816" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:39.716577" elapsed="0.027239"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:39.744909" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:39.744909" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:39.743816" elapsed="0.002249"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:39.743816" elapsed="0.002249"/>
-</for>
-<var name="${locatorIndex}">13</var>
-<status status="PASS" start="2024-02-20T09:57:39.716522" elapsed="0.029543"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:39.772216" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:39.747186" elapsed="0.026175"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:39.774487" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:39.775681" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:39.774487" elapsed="0.001194"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:39.773361" elapsed="0.002320"/>
-</for>
-<var name="${locatorIndex}">14</var>
-<status status="PASS" start="2024-02-20T09:57:39.746065" elapsed="0.030746"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:39.805848" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:39.777939" elapsed="0.029130"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:39.808279" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:39.809419" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:39.808279" elapsed="0.001140"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:39.807069" elapsed="0.003478"/>
-</for>
-<var name="${locatorIndex}">15</var>
-<status status="PASS" start="2024-02-20T09:57:39.776811" elapsed="0.033736"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:39.838327" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:39.811657" elapsed="0.026670"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:39.840539" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:39.841664" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:39.839444" elapsed="0.002220"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:39.839444" elapsed="0.002220"/>
-</for>
-<var name="${locatorIndex}">16</var>
-<status status="PASS" start="2024-02-20T09:57:39.810547" elapsed="0.032242"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:39.867973" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:39.843861" elapsed="0.024112"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:39.870190" elapsed="0.000057"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:39.870247" elapsed="0.001079"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:39.869106" elapsed="0.002273"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:39.869022" elapsed="0.002357"/>
-</for>
-<var name="${locatorIndex}">17</var>
-<status status="PASS" start="2024-02-20T09:57:39.842789" elapsed="0.028590"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:39.898953" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:39.872508" elapsed="0.026445"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:39.900505" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:39.901590" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:39.899896" elapsed="0.002814"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:39.898953" elapsed="0.003757"/>
-</for>
-<var name="${locatorIndex}">18</var>
-<status status="PASS" start="2024-02-20T09:57:39.872508" elapsed="0.030202"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:39.929559" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:39.903708" elapsed="0.025851"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:39.930625" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:39.932247" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:39.930625" elapsed="0.001622"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:39.930563" elapsed="0.002764"/>
-</for>
-<var name="${locatorIndex}">19</var>
-<status status="PASS" start="2024-02-20T09:57:39.903708" elapsed="0.029673"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:39.959188" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:39.934501" elapsed="0.024687"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:39.960302" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:39.961369" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:39.960302" elapsed="0.001067"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:39.959188" elapsed="0.002181"/>
-</for>
-<var name="${locatorIndex}">20</var>
-<status status="PASS" start="2024-02-20T09:57:39.933381" elapsed="0.027988"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:39.986085" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:39.962436" elapsed="0.023649"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:39.988219" elapsed="0.000066"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:39.988285" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:39.987217" elapsed="0.001068"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:39.987217" elapsed="0.002132"/>
-</for>
-<var name="${locatorIndex}">21</var>
-<status status="PASS" start="2024-02-20T09:57:39.962436" elapsed="0.026913"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:40.013297" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:39.990410" elapsed="0.023990"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.015539" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.016665" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:40.015539" elapsed="0.001126"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:40.014400" elapsed="0.003387"/>
-</for>
-<var name="${locatorIndex}">22</var>
-<status status="PASS" start="2024-02-20T09:57:39.989349" elapsed="0.028438"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:40.043745" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:40.018918" elapsed="0.024827"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.044870" elapsed="0.001072"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.045996" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:40.044870" elapsed="0.001126"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:40.043745" elapsed="0.003384"/>
-</for>
-<var name="${locatorIndex}">23</var>
-<status status="PASS" start="2024-02-20T09:57:40.017787" elapsed="0.029342"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:40.072710" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:40.048254" elapsed="0.024456"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.074961" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.074961" elapsed="0.001126"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:40.073837" elapsed="0.002250"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:40.073837" elapsed="0.002250"/>
-</for>
-<var name="${locatorIndex}">24</var>
-<status status="PASS" start="2024-02-20T09:57:40.047129" elapsed="0.030046"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:40.102607" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:40.078302" elapsed="0.024305"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.103714" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.104714" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:40.103650" elapsed="0.002121"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:40.102607" elapsed="0.003164"/>
-</for>
-<var name="${locatorIndex}">25</var>
-<status status="PASS" start="2024-02-20T09:57:40.077175" elapsed="0.028596"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:40.131206" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:40.106888" elapsed="0.024318"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.132265" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.132265" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:40.132265" elapsed="0.001073"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:40.131206" elapsed="0.002132"/>
-</for>
-<var name="${locatorIndex}">26</var>
-<status status="PASS" start="2024-02-20T09:57:40.105771" elapsed="0.027567"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:40.158585" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:40.134491" elapsed="0.024094"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.160818" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.160818" elapsed="0.001130"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:40.159736" elapsed="0.002212"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:40.159648" elapsed="0.002300"/>
-</for>
-<var name="${locatorIndex}">27</var>
-<status status="PASS" start="2024-02-20T09:57:40.134491" elapsed="0.027457"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:40.189369" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:40.163105" elapsed="0.026318"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.190552" elapsed="0.001125"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.191677" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:40.190552" elapsed="0.002244"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:40.189423" elapsed="0.003373"/>
-</for>
-<var name="${locatorIndex}">28</var>
-<status status="PASS" start="2024-02-20T09:57:40.163105" elapsed="0.029691"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:40.219848" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:40.193920" elapsed="0.027064"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.222106" elapsed="0.001119"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.223225" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:40.222106" elapsed="0.002211"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:40.220984" elapsed="0.003333"/>
-</for>
-<var name="${locatorIndex}">29</var>
-<status status="PASS" start="2024-02-20T09:57:40.193920" elapsed="0.030397"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:40.250973" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:40.225423" elapsed="0.026634"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.253341" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.254474" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:40.252198" elapsed="0.002276"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:40.252198" elapsed="0.003354"/>
-</for>
-<var name="${locatorIndex}">30</var>
-<status status="PASS" start="2024-02-20T09:57:40.225423" elapsed="0.030182"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:40.282340" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:40.256736" elapsed="0.025661"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.283529" elapsed="0.001112"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.284641" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:40.283529" elapsed="0.002270"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:40.282397" elapsed="0.003402"/>
-</for>
-<var name="${locatorIndex}">31</var>
-<status status="PASS" start="2024-02-20T09:57:40.255605" elapsed="0.030194"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:40.311869" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:40.286940" elapsed="0.024929"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.314170" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.314170" elapsed="0.001185"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:40.313002" elapsed="0.002353"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:40.313002" elapsed="0.002353"/>
-</for>
-<var name="${locatorIndex}">32</var>
-<status status="PASS" start="2024-02-20T09:57:40.286940" elapsed="0.028415"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:40.340468" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:40.316467" elapsed="0.025046"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.341608" elapsed="0.001164"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.342772" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:40.341608" elapsed="0.002309"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:40.341608" elapsed="0.002309"/>
-</for>
-<var name="${locatorIndex}">33</var>
-<status status="PASS" start="2024-02-20T09:57:40.316467" elapsed="0.027450"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:40.369775" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:40.345079" elapsed="0.025044"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.371197" elapsed="0.001170"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.372367" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:40.371197" elapsed="0.002330"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:40.370123" elapsed="0.003404"/>
-</for>
-<var name="${locatorIndex}">34</var>
-<status status="PASS" start="2024-02-20T09:57:40.343917" elapsed="0.029610"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:40.402108" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:40.374618" elapsed="0.027490"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.403643" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.403643" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:40.403114" elapsed="0.000529"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:40.402108" elapsed="0.002614"/>
-</for>
-<var name="${locatorIndex}">35</var>
-<status status="PASS" start="2024-02-20T09:57:40.374618" elapsed="0.030195"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:40.432327" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:40.404813" elapsed="0.027514"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.433463" elapsed="0.001184"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.434647" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:40.433463" elapsed="0.002182"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:40.432327" elapsed="0.003318"/>
-</for>
-<var name="${locatorIndex}">36</var>
-<status status="PASS" start="2024-02-20T09:57:40.404813" elapsed="0.030832"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:40.462519" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:40.437289" elapsed="0.025230"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.464794" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.465922" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:40.463663" elapsed="0.002259"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:40.463663" elapsed="0.002259"/>
-</for>
-<var name="${locatorIndex}">37</var>
-<status status="PASS" start="2024-02-20T09:57:40.437155" elapsed="0.029892"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:40.492928" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:40.468129" elapsed="0.024799"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.495163" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.496307" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:40.494043" elapsed="0.002264"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:40.494043" elapsed="0.002264"/>
-</for>
-<var name="${locatorIndex}">38</var>
-<status status="PASS" start="2024-02-20T09:57:40.467047" elapsed="0.030396"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:40.522965" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:40.498578" elapsed="0.024458"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.524034" elapsed="0.001142"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.525176" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:40.524034" elapsed="0.002369"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:40.523036" elapsed="0.003367"/>
-</for>
-<var name="${locatorIndex}">39</var>
-<status status="PASS" start="2024-02-20T09:57:40.497443" elapsed="0.028960"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:40.553637" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:40.527498" elapsed="0.026139"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.555903" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.556989" elapsed="0.000052"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:40.554776" elapsed="0.002265"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:40.554776" elapsed="0.002265"/>
-</for>
-<var name="${locatorIndex}">40</var>
-<status status="PASS" start="2024-02-20T09:57:40.527498" elapsed="0.030728"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:40.585729" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:40.559225" elapsed="0.026504"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.586948" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.586948" elapsed="0.001039"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:40.586948" elapsed="0.001039"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:40.585729" elapsed="0.002258"/>
-</for>
-<var name="${locatorIndex}">41</var>
-<status status="PASS" start="2024-02-20T09:57:40.558226" elapsed="0.029761"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:40.614055" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:40.589157" elapsed="0.024898"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.615178" elapsed="0.001176"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.616354" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:40.615178" elapsed="0.001176"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:40.615178" elapsed="0.001176"/>
-</for>
-<var name="${locatorIndex}">42</var>
-<status status="PASS" start="2024-02-20T09:57:40.587987" elapsed="0.029451"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:40.643622" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:40.617438" elapsed="0.026237"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.644804" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.645932" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:40.644804" elapsed="0.002256"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:40.643675" elapsed="0.003385"/>
-</for>
-<var name="${locatorIndex}">43</var>
-<status status="PASS" start="2024-02-20T09:57:40.617438" elapsed="0.029622"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:40.674428" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:40.648185" elapsed="0.026243"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.675495" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.675495" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:40.675495" elapsed="0.001584"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:40.674428" elapsed="0.002651"/>
-</for>
-<var name="${locatorIndex}">44</var>
-<status status="PASS" start="2024-02-20T09:57:40.648185" elapsed="0.028894"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:40.702977" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:40.678140" elapsed="0.025882"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.705245" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.706375" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:40.704082" elapsed="0.002293"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:40.704082" elapsed="0.002293"/>
-</for>
-<var name="${locatorIndex}">45</var>
-<status status="PASS" start="2024-02-20T09:57:40.677079" elapsed="0.030443"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:40.734152" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:40.708661" elapsed="0.026593"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.736435" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.736435" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:40.735254" elapsed="0.001181"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:40.735254" elapsed="0.001181"/>
-</for>
-<var name="${locatorIndex}">46</var>
-<status status="PASS" start="2024-02-20T09:57:40.707522" elapsed="0.028913"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:40.792091" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:40.738080" elapsed="0.055162"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.794452" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.795435" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:40.793242" elapsed="0.002193"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:40.793242" elapsed="0.003345"/>
-</for>
-<var name="${locatorIndex}">47</var>
-<status status="PASS" start="2024-02-20T09:57:40.738080" elapsed="0.058507"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:40.821546" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:40.797714" elapsed="0.023832"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.822119" elapsed="0.001061"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.823180" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:40.822119" elapsed="0.001061"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:40.822119" elapsed="0.001061"/>
-</for>
-<var name="${locatorIndex}">48</var>
-<status status="PASS" start="2024-02-20T09:57:40.797714" elapsed="0.026523"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:40.844859" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:40.824237" elapsed="0.021191"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.846502" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.846502" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:40.845428" elapsed="0.002071"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:40.845428" elapsed="0.002071"/>
-</for>
-<var name="${locatorIndex}">49</var>
-<status status="PASS" start="2024-02-20T09:57:40.824237" elapsed="0.023262"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:40.871977" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:40.848561" elapsed="0.024495"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.874117" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.874117" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:40.873056" elapsed="0.001061"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:40.873056" elapsed="0.002118"/>
-</for>
-<var name="${locatorIndex}">50</var>
-<status status="PASS" start="2024-02-20T09:57:40.848561" elapsed="0.026613"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:40.900752" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:40.875174" elapsed="0.026699"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.902973" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.902973" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:40.901873" elapsed="0.001100"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:40.901873" elapsed="0.001100"/>
-</for>
-<var name="${locatorIndex}">51</var>
-<status status="PASS" start="2024-02-20T09:57:40.875174" elapsed="0.027799"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:40.929891" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:40.904547" elapsed="0.026441"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.932089" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.932089" elapsed="0.001064"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:40.932023" elapsed="0.001130"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:40.930988" elapsed="0.002165"/>
-</for>
-<var name="${locatorIndex}">52</var>
-<status status="PASS" start="2024-02-20T09:57:40.904547" elapsed="0.028606"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:40.958187" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:40.934214" elapsed="0.023973"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.959243" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.960299" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:40.959243" elapsed="0.001056"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:40.958187" elapsed="0.002112"/>
-</for>
-<var name="${locatorIndex}">53</var>
-<status status="PASS" start="2024-02-20T09:57:40.933153" elapsed="0.027146"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:40.987005" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:40.961358" elapsed="0.026719"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.989137" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:40.989137" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:40.988077" elapsed="0.002063"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:40.988077" elapsed="0.002118"/>
-</for>
-<var name="${locatorIndex}">54</var>
-<status status="PASS" start="2024-02-20T09:57:40.961358" elapsed="0.028837"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:41.015858" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:40.991251" elapsed="0.024607"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.016917" elapsed="0.001060"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.017977" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:41.016917" elapsed="0.002129"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:41.016860" elapsed="0.002186"/>
-</for>
-<var name="${locatorIndex}">55</var>
-<status status="PASS" start="2024-02-20T09:57:40.990195" elapsed="0.029849"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:41.045950" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:41.021112" elapsed="0.024838"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.047079" elapsed="0.001128"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.048207" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:41.047079" elapsed="0.001128"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:41.045950" elapsed="0.003381"/>
-</for>
-<var name="${locatorIndex}">56</var>
-<status status="PASS" start="2024-02-20T09:57:41.020044" elapsed="0.029287"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:41.076582" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:41.050456" elapsed="0.026126"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.077746" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.077746" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:41.077655" elapsed="0.001246"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:41.076582" elapsed="0.002319"/>
-</for>
-<var name="${locatorIndex}">57</var>
-<status status="PASS" start="2024-02-20T09:57:41.050404" elapsed="0.028497"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:41.103548" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:41.080055" elapsed="0.023493"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.106258" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.106258" elapsed="0.001121"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:41.105127" elapsed="0.002252"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:41.105127" elapsed="0.002252"/>
-</for>
-<var name="${locatorIndex}">58</var>
-<status status="PASS" start="2024-02-20T09:57:41.078901" elapsed="0.028478"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:41.137928" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:41.108505" elapsed="0.029423"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.138523" elapsed="0.001128"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.139651" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:41.138523" elapsed="0.001128"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:41.138523" elapsed="0.001128"/>
-</for>
-<var name="${locatorIndex}">59</var>
-<status status="PASS" start="2024-02-20T09:57:41.108505" elapsed="0.032211"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:41.166688" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:41.140803" elapsed="0.025885"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.167773" elapsed="0.001166"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.168939" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:41.167773" elapsed="0.001166"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:41.167773" elapsed="0.001166"/>
-</for>
-<var name="${locatorIndex}">60</var>
-<status status="PASS" start="2024-02-20T09:57:41.140803" elapsed="0.028136"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:41.194006" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:41.170102" elapsed="0.025001"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.196251" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.197357" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:41.196251" elapsed="0.002148"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:41.195103" elapsed="0.003353"/>
-</for>
-<var name="${locatorIndex}">61</var>
-<status status="PASS" start="2024-02-20T09:57:41.170102" elapsed="0.028354"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:41.226525" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:41.199590" elapsed="0.026935"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.227631" elapsed="0.001065"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.228696" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:41.227631" elapsed="0.001065"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:41.227631" elapsed="0.002129"/>
-</for>
-<var name="${locatorIndex}">62</var>
-<status status="PASS" start="2024-02-20T09:57:41.199590" elapsed="0.030170"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:41.255625" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:41.230828" elapsed="0.025942"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.257914" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.259076" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:41.257914" elapsed="0.001162"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:41.256770" elapsed="0.003464"/>
-</for>
-<var name="${locatorIndex}">63</var>
-<status status="PASS" start="2024-02-20T09:57:41.229760" elapsed="0.030474"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:41.287917" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:41.261376" elapsed="0.026541"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.290189" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.290189" elapsed="0.001128"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:41.289057" elapsed="0.002260"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:41.289057" elapsed="0.002260"/>
-</for>
-<var name="${locatorIndex}">64</var>
-<status status="PASS" start="2024-02-20T09:57:41.261376" elapsed="0.031019"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:41.314462" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:41.293524" elapsed="0.022081"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.316683" elapsed="0.000090"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.316773" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:41.315605" elapsed="0.001168"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:41.315605" elapsed="0.002265"/>
-</for>
-<var name="${locatorIndex}">65</var>
-<status status="PASS" start="2024-02-20T09:57:41.292447" elapsed="0.025423"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:41.343369" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:41.317870" elapsed="0.025499"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.344537" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.345697" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:41.344537" elapsed="0.001160"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:41.344441" elapsed="0.001256"/>
-</for>
-<var name="${locatorIndex}">66</var>
-<status status="PASS" start="2024-02-20T09:57:41.317870" elapsed="0.027827"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:41.372226" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:41.346883" elapsed="0.026412"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.373387" elapsed="0.001159"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.374546" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:41.373387" elapsed="0.001159"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:41.373387" elapsed="0.001159"/>
-</for>
-<var name="${locatorIndex}">67</var>
-<status status="PASS" start="2024-02-20T09:57:41.346833" elapsed="0.028786"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:41.401105" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:41.375711" elapsed="0.025394"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.403261" elapsed="0.001092"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.404353" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:41.403261" elapsed="0.002197"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:41.402261" elapsed="0.003197"/>
-</for>
-<var name="${locatorIndex}">68</var>
-<status status="PASS" start="2024-02-20T09:57:41.375711" elapsed="0.029747"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:41.434657" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:41.407453" elapsed="0.028212"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.436045" elapsed="0.000999"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.437044" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:41.436045" elapsed="0.000999"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:41.436045" elapsed="0.000999"/>
-</for>
-<var name="${locatorIndex}">69</var>
-<status status="PASS" start="2024-02-20T09:57:41.406457" elapsed="0.031718"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:41.463889" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:41.438758" elapsed="0.025131"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.464954" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.465952" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:41.464954" elapsed="0.000998"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:41.463889" elapsed="0.002063"/>
-</for>
-<var name="${locatorIndex}">70</var>
-<status status="PASS" start="2024-02-20T09:57:41.438175" elapsed="0.028835"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:41.494898" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:41.468040" elapsed="0.026858"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.495533" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.496658" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:41.495533" elapsed="0.001125"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:41.495533" elapsed="0.001125"/>
-</for>
-<var name="${locatorIndex}">71</var>
-<status status="PASS" start="2024-02-20T09:57:41.467010" elapsed="0.029648"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:41.525591" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:41.497798" elapsed="0.027793"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.526654" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.527711" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:41.526654" elapsed="0.001057"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:41.525591" elapsed="0.002120"/>
-</for>
-<var name="${locatorIndex}">72</var>
-<status status="PASS" start="2024-02-20T09:57:41.497798" elapsed="0.029913"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:41.554595" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:41.528769" elapsed="0.026395"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.556167" elapsed="0.000058"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.556225" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:41.555164" elapsed="0.001061"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:41.555164" elapsed="0.002066"/>
-</for>
-<var name="${locatorIndex}">73</var>
-<status status="PASS" start="2024-02-20T09:57:41.528769" elapsed="0.028525"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:41.584110" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:41.557294" elapsed="0.026908"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.585337" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.585337" elapsed="0.001137"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:41.584202" elapsed="0.002272"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:41.584202" elapsed="0.002272"/>
-</for>
-<var name="${locatorIndex}">74</var>
-<status status="PASS" start="2024-02-20T09:57:41.557294" elapsed="0.029180"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:41.613412" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:41.587661" elapsed="0.026901"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.615721" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.616888" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:41.615721" elapsed="0.001167"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:41.614562" elapsed="0.002326"/>
-</for>
-<var name="${locatorIndex}">75</var>
-<status status="PASS" start="2024-02-20T09:57:41.587558" elapsed="0.030328"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:41.649617" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:41.617886" elapsed="0.031731"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.650884" elapsed="0.001101"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.651985" elapsed="0.001004"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:41.650884" elapsed="0.002412"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:41.650884" elapsed="0.002412"/>
-</for>
-<var name="${locatorIndex}">76</var>
-<status status="PASS" start="2024-02-20T09:57:41.617886" elapsed="0.035410"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:41.681691" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:41.654465" elapsed="0.027314"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.682934" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.682934" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:41.681779" elapsed="0.001155"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:41.681779" elapsed="0.002310"/>
-</for>
-<var name="${locatorIndex}">77</var>
-<status status="PASS" start="2024-02-20T09:57:41.654465" elapsed="0.029624"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:41.710637" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:41.685123" elapsed="0.025514"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.711808" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.711808" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:41.710637" elapsed="0.002247"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:41.710637" elapsed="0.002344"/>
-</for>
-<var name="${locatorIndex}">78</var>
-<status status="PASS" start="2024-02-20T09:57:41.684089" elapsed="0.028892"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:41.739137" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:41.712981" elapsed="0.027351"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.741503" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.742084" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:41.740332" elapsed="0.001752"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:41.740332" elapsed="0.001752"/>
-</for>
-<var name="${locatorIndex}">79</var>
-<status status="PASS" start="2024-02-20T09:57:41.712981" elapsed="0.029103"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:41.769476" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:41.743223" elapsed="0.026253"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.770649" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.770649" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:41.770552" elapsed="0.001272"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:41.769476" elapsed="0.002348"/>
-</for>
-<var name="${locatorIndex}">80</var>
-<status status="PASS" start="2024-02-20T09:57:41.743223" elapsed="0.028601"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:41.799582" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:41.773000" elapsed="0.026582"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.801895" elapsed="0.000098"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.801993" elapsed="0.001162"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:41.800816" elapsed="0.002339"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:41.799582" elapsed="0.003573"/>
-</for>
-<var name="${locatorIndex}">81</var>
-<status status="PASS" start="2024-02-20T09:57:41.773000" elapsed="0.030155"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:41.832209" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:41.805454" elapsed="0.026755"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.834322" elapsed="0.000068"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.834390" elapsed="0.000997"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:41.833319" elapsed="0.002068"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:41.832209" elapsed="0.004180"/>
-</for>
-<var name="${locatorIndex}">82</var>
-<status status="PASS" start="2024-02-20T09:57:41.804324" elapsed="0.032172"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:41.865083" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:41.837611" elapsed="0.027472"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.867266" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.868380" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:41.866269" elapsed="0.002111"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:41.866269" elapsed="0.003236"/>
-</for>
-<var name="${locatorIndex}">83</var>
-<status status="PASS" start="2024-02-20T09:57:41.836496" elapsed="0.033009"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:41.897185" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:41.870674" elapsed="0.026511"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.898360" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.899432" elapsed="0.000097"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:41.898360" elapsed="0.001169"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:41.897185" elapsed="0.002344"/>
-</for>
-<var name="${locatorIndex}">84</var>
-<status status="PASS" start="2024-02-20T09:57:41.870674" elapsed="0.028855"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:41.925860" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:41.900707" elapsed="0.026243"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.927048" elapsed="0.001180"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.928228" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:41.927048" elapsed="0.002260"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:41.927048" elapsed="0.002349"/>
-</for>
-<var name="${locatorIndex}">85</var>
-<status status="PASS" start="2024-02-20T09:57:41.899529" elapsed="0.029868"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:41.955690" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:41.929397" elapsed="0.026293"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.956875" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.958089" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:41.956875" elapsed="0.001214"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:41.955690" elapsed="0.002399"/>
-</for>
-<var name="${locatorIndex}">86</var>
-<status status="PASS" start="2024-02-20T09:57:41.929397" elapsed="0.029777"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:41.985754" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:41.959272" elapsed="0.026482"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.986941" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:41.986941" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:41.986838" elapsed="0.001345"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:41.985754" elapsed="0.002429"/>
-</for>
-<var name="${locatorIndex}">87</var>
-<status status="PASS" start="2024-02-20T09:57:41.959272" elapsed="0.028911"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:42.014398" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:41.988183" elapsed="0.026215"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:42.015582" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:42.016768" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:42.015582" elapsed="0.001186"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:42.015479" elapsed="0.001289"/>
-</for>
-<var name="${locatorIndex}">88</var>
-<status status="PASS" start="2024-02-20T09:57:41.988183" elapsed="0.028585"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:42.043790" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:42.017921" elapsed="0.025869"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:42.044891" elapsed="0.001099"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:42.045990" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:42.044891" elapsed="0.002373"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:42.043790" elapsed="0.003474"/>
-</for>
-<var name="${locatorIndex}">89</var>
-<status status="PASS" start="2024-02-20T09:57:42.017921" elapsed="0.029343"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:42.075255" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:42.048418" elapsed="0.026837"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:42.076581" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:42.077580" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:42.076581" elapsed="0.000999"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:42.075255" elapsed="0.002325"/>
-</for>
-<var name="${locatorIndex}">90</var>
-<status status="PASS" start="2024-02-20T09:57:42.048418" elapsed="0.029162"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:42.106908" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:42.079111" elapsed="0.027858"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:42.107556" elapsed="0.001139"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:42.108695" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:42.107556" elapsed="0.001139"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:42.107556" elapsed="0.001139"/>
-</for>
-<var name="${locatorIndex}">91</var>
-<status status="PASS" start="2024-02-20T09:57:42.079013" elapsed="0.030857"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:42.136638" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:42.109870" elapsed="0.026768"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:42.137695" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:42.138791" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:42.137695" elapsed="0.001096"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:42.136638" elapsed="0.002666"/>
-</for>
-<var name="${locatorIndex}">92</var>
-<status status="PASS" start="2024-02-20T09:57:42.109870" elapsed="0.029434"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:42.166961" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:42.139304" elapsed="0.027657"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:42.168114" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:42.169043" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:42.168114" elapsed="0.001483"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:42.166961" elapsed="0.002743"/>
-</for>
-<var name="${locatorIndex}">93</var>
-<status status="PASS" start="2024-02-20T09:57:42.139304" elapsed="0.030400"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:42.196568" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:42.169704" elapsed="0.026864"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:42.197620" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:42.198696" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:42.197620" elapsed="0.001076"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:42.196568" elapsed="0.002128"/>
-</for>
-<var name="${locatorIndex}">94</var>
-<status status="PASS" start="2024-02-20T09:57:42.169704" elapsed="0.028992"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:42.224470" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:42.199696" elapsed="0.025858"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:42.226550" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:42.227197" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:42.225656" elapsed="0.001541"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:42.225656" elapsed="0.001541"/>
-</for>
-<var name="${locatorIndex}">95</var>
-<status status="PASS" start="2024-02-20T09:57:42.199696" elapsed="0.027501"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:42.257734" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:42.228358" elapsed="0.030419"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:42.259847" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:42.260948" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:42.258850" elapsed="0.002098"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:42.258850" elapsed="0.003131"/>
-</for>
-<var name="${locatorIndex}">96</var>
-<status status="PASS" start="2024-02-20T09:57:42.228358" elapsed="0.033748"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:42.289451" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:42.262106" elapsed="0.027345"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:42.290576" elapsed="0.001158"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:42.291734" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:42.290576" elapsed="0.002299"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:42.290576" elapsed="0.002299"/>
-</for>
-<var name="${locatorIndex}">97</var>
-<status status="PASS" start="2024-02-20T09:57:42.262106" elapsed="0.030769"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:42.320206" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:42.294039" elapsed="0.027165"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:42.322333" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:42.322333" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:42.321204" elapsed="0.001129"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:42.321204" elapsed="0.002287"/>
-</for>
-<var name="${locatorIndex}">98</var>
-<status status="PASS" start="2024-02-20T09:57:42.292875" elapsed="0.030616"/>
-</iter>
-<iter>
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T09:57:42.352189" level="INFO">@{WebpageProducts} = [ ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T09:57:42.323491" elapsed="0.028698"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:42.353852" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T09:57:42.355035" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T09:57:42.353852" elapsed="0.001183"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T09:57:42.352750" elapsed="0.003420"/>
-</for>
-<var name="${locatorIndex}">99</var>
-<status status="PASS" start="2024-02-20T09:57:42.323491" elapsed="0.032679"/>
+<status status="PASS" start="2024-02-20T15:47:58.301621" elapsed="0.250723"/>
 </iter>
 <var>${locatorIndex}</var>
 <value>1</value>
 <value>100</value>
-<status status="PASS" start="2024-02-20T09:57:39.228480" elapsed="3.127690"/>
+<status status="PASS" start="2024-02-20T15:47:57.846872" elapsed="0.705472"/>
 </for>
 <return>
 <value>${productTitles}</value>
-<status status="PASS" start="2024-02-20T09:57:42.357272" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-20T15:47:58.552344" elapsed="0.000000"/>
 </return>
-<msg time="2024-02-20T09:57:42.358374" level="INFO">@{LicencePlates} = [ BBE465 | BDE463 | JKI321 ]</msg>
+<msg time="2024-02-20T15:47:58.553532" level="INFO">@{LicencePlates} = [ BBE465 | BDE463 | JKI321 ]</msg>
 <var>@{LicencePlates}</var>
 <tag>AllBookedCars</tag>
 <doc>Creates a list of licence numbers of all booked cars</doc>
-<status status="PASS" start="2024-02-20T09:57:39.225968" elapsed="3.132406"/>
+<status status="PASS" start="2024-02-20T15:47:57.843136" elapsed="0.710396"/>
 </kw>
 <kw name="List Should Contain Value" owner="Collections">
-<msg time="2024-02-20T09:57:42.360522" level="INFO">False</msg>
-<msg time="2024-02-20T09:57:42.360574" level="FAIL">[ BBE465 | BDE463 | JKI321 ] does not contain value '//td[@id='licenseNumber3']'.</msg>
+<msg time="2024-02-20T15:47:58.554712" level="INFO">False</msg>
 <arg>${LicencePlates}</arg>
-<arg>//td[@id='licenseNumber3']</arg>
+<arg>JKI321</arg>
 <doc>Fails if the ``value`` is not found from ``list``.</doc>
-<status status="FAIL" start="2024-02-20T09:57:42.358374" elapsed="0.003246">[ BBE465 | BDE463 | JKI321 ] does not contain value '//td[@id='licenseNumber3']'.</status>
+<status status="PASS" start="2024-02-20T15:47:58.553532" elapsed="0.001180"/>
 </kw>
 <tag>BookedCars</tag>
 <doc>Verifies that the car is added to my Page</doc>
-<status status="FAIL" start="2024-02-20T09:57:38.871456" elapsed="3.490217">[ BBE465 | BDE463 | JKI321 ] does not contain value '//td[@id='licenseNumber3']'.</status>
+<status status="PASS" start="2024-02-20T15:47:57.489911" elapsed="1.064801"/>
 </kw>
 <kw name="LogOut" owner="BokaBilResources">
-<status status="NOT RUN" start="2024-02-20T09:57:42.362774" elapsed="0.000000"/>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-20T15:47:58.556251" level="INFO">Clicking element '//button[@id='logout']'.</msg>
+<arg>//button[@id='logout']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-20T15:47:58.556251" elapsed="0.225366"/>
 </kw>
-<status status="FAIL" start="2024-02-20T09:57:34.414544" elapsed="7.949334">[ BBE465 | BDE463 | JKI321 ] does not contain value '//td[@id='licenseNumber3']'.</status>
+<status status="PASS" start="2024-02-20T15:47:58.554712" elapsed="0.228032"/>
+</kw>
+<status status="PASS" start="2024-02-20T15:47:52.982880" elapsed="5.799953"/>
 </test>
 <doc>resource fil för test av boka bil</doc>
-<status status="FAIL" start="2024-02-20T09:57:30.743314" elapsed="11.621654"/>
+<status status="PASS" start="2024-02-20T15:47:49.199063" elapsed="9.587625"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="0" fail="1" skip="0" id="s1" name="BokaBil">BokaBil</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="BokaBil">BokaBil</stat>
 </suite>
 </statistics>
 <errors>
