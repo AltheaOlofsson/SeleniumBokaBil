@@ -4,7 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="717f8d15-df9c-4b85-b6fd-df4d13b8a589" name="Changes" comment="" />
+    <list default="true" id="717f8d15-df9c-4b85-b6fd-df4d13b8a589" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/log.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/output.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/report.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-10.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-11.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-12.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-13.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-14.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-15.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-16.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-17.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BokaBil.robot" beforeDir="false" afterPath="$PROJECT_DIR$/BokaBil.robot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BokaBilResources.robot" beforeDir="false" afterPath="$PROJECT_DIR$/BokaBilResources.robot" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,9 +38,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2cMGgTI2YEaZAYOYi1tIyxmY70p" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -27,6 +52,10 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Robot Framework.run [BookCarTest].executor": "Run",
+    "Robot Framework.run [BookCarTodayWhenNotLoggedIn].executor": "Run",
+    "Robot Framework.run [BookCarWhenLoggedIn].executor": "Run",
+    "Robot Framework.run [CancelBookingOfCar].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "BokaBil",
