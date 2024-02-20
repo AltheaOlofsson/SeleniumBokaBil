@@ -15,14 +15,13 @@ BookCarWhenLoggedIn
     VerifyCarToBeBooked
     LogOut
 
+BookCarGherkin
+    Given IAmLoggedIn
+    When IBookACarAndFillInPayment
+    Then CarShouldBeAddedToMyPage
+
 CancelBookingOfCar
     CancelAndVerifyBooking
-
-
-
-
-
-
 
 
 
@@ -31,5 +30,5 @@ BookCarWhenNotLoggedIn
     AttemptToBookVolvo
     VerifyNotLoggedIn
 
-
-
+WrongCardFormat
+    WrongCardNumberFormatShouldProducePrompt
