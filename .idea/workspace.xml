@@ -5,43 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="717f8d15-df9c-4b85-b6fd-df4d13b8a589" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-21.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-22.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-23.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-24.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-25.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-26.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-27.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-28.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-29.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-30.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-31.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-32.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-33.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-34.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-35.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-36.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-37.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-38.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-39.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-40.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-41.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-42.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-43.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-44.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-45.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-46.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-47.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-48.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-49.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-50.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-51.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-52.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-53.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-54.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-55.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/log/selenium-screenshot-56.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BokaBil.robot" beforeDir="false" afterPath="$PROJECT_DIR$/BokaBil.robot" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BokaBilResources.robot" beforeDir="false" afterPath="$PROJECT_DIR$/BokaBilResources.robot" afterDir="false" />

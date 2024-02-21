@@ -1,381 +1,411 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-02-20T21:50:53.281406" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-02-21T10:09:14.665372" rpa="false" schemaversion="5">
 <suite id="s1" name="BokaBil" source="C:\Users\Althea\Desktop\Selenium BokaBil\SeleniumBokaBil\BokaBil.robot">
 <kw name="SetupBrowser" owner="BokaBilResources" type="SETUP">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-02-20T21:50:53.558554" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
+<msg time="2024-02-21T10:09:15.260780" level="INFO">Opening browser 'Chrome' to base url 'None'.</msg>
 <arg>browser=Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-02-20T21:50:53.558554" elapsed="1.756279"/>
+<status status="PASS" start="2024-02-21T10:09:15.260780" elapsed="3.746058"/>
 </kw>
 <kw name="Go To" owner="SeleniumLibrary">
-<msg time="2024-02-20T21:50:55.315919" level="INFO">Opening url 'https://rental3.infotiv.net/'</msg>
+<msg time="2024-02-21T10:09:19.008993" level="INFO">Opening url 'https://rental3.infotiv.net/'</msg>
 <arg>${urlRental}</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<status status="PASS" start="2024-02-20T21:50:55.315919" elapsed="0.456171"/>
+<status status="PASS" start="2024-02-21T10:09:19.007867" elapsed="0.282450"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>//h1[@id='title']</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-02-20T21:50:55.772090" elapsed="0.066917"/>
+<status status="PASS" start="2024-02-21T10:09:19.290317" elapsed="0.138270"/>
 </kw>
 <arg>${urlRental}</arg>
 <tag>Setup</tag>
 <doc>Opens Chrome</doc>
-<status status="PASS" start="2024-02-20T21:50:53.557492" elapsed="2.281515"/>
+<status status="PASS" start="2024-02-21T10:09:15.258754" elapsed="4.171058"/>
 </kw>
-<test id="s1-t1" name="CancelBookingOfCar" line="23">
-<kw name="CancelAndVerifyBooking" owner="BokaBilResources">
-<kw name="MakeSureImLoggedIn" owner="BokaBilResources">
-<kw name="Run Keyword And Return Status" owner="BuiltIn">
-<kw name="CheckIfLoggedIn" owner="BokaBilResources">
-<kw name="Set Variable If" owner="BuiltIn">
-<msg time="2024-02-20T21:50:55.844450" level="FAIL">Evaluating expression 'Element should be visible' failed: SyntaxError: invalid syntax (&lt;string&gt;, line 1)</msg>
-<var>${LoggedIn}</var>
-<arg>Element should be visible</arg>
-<arg>//label[@id='welcomePhrase']</arg>
-<arg>True</arg>
-<arg>False</arg>
-<doc>Sets variable based on the given condition.</doc>
-<status status="FAIL" start="2024-02-20T21:50:55.843376" elapsed="0.001074">Evaluating expression 'Element should be visible' failed: SyntaxError: invalid syntax (&lt;string&gt;, line 1)</status>
-</kw>
-<return>
-<value>${LoggedIn}</value>
-<status status="NOT RUN" start="2024-02-20T21:50:55.844450" elapsed="0.001084"/>
-</return>
-<arg>${LoggedIn}</arg>
-<tag>VerifyLoggedIn</tag>
-<doc>Checks if user is logged in</doc>
-<status status="FAIL" start="2024-02-20T21:50:55.843376" elapsed="0.002158">Evaluating expression 'Element should be visible' failed: SyntaxError: invalid syntax (&lt;string&gt;, line 1)</status>
-</kw>
-<msg time="2024-02-20T21:50:55.846532" level="INFO">${LoginStatus} = False</msg>
-<var>${LoginStatus}</var>
-<arg>CheckIfLoggedIn</arg>
-<arg>${LoggedIn}</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2024-02-20T21:50:55.842379" elapsed="0.004153"/>
-</kw>
-<kw name="Run Keyword If" owner="BuiltIn">
-<kw name="LogInRental" owner="BokaBilResources">
+<test id="s1-t1" name="BookCarWhenLoggedIn" line="11">
+<kw name="Given I log in to rental" owner="BokaBilResources">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-20T21:50:55.849591" level="INFO">Typing text 'robot.selenium@robot.se' into text field '//input[@id='email']'.</msg>
+<msg time="2024-02-21T10:09:19.433834" level="INFO">Typing text 'robot.selenium@robot.se' into text field '//input[@id='email']'.</msg>
 <arg>//input[@id='email']</arg>
 <arg>${userEmail}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-20T21:50:55.848594" elapsed="0.273773"/>
+<status status="PASS" start="2024-02-21T10:09:19.432836" elapsed="0.401219"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-20T21:50:56.123401" level="INFO">Typing text '123Robot' into text field '//input[@id='password']'.</msg>
+<msg time="2024-02-21T10:09:19.834055" level="INFO">Typing text '123Robot' into text field '//input[@id='password']'.</msg>
 <arg>//input[@id='password']</arg>
 <arg>${userPassword}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-20T21:50:56.123401" elapsed="0.172810"/>
+<status status="PASS" start="2024-02-21T10:09:19.834055" elapsed="0.196195"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-20T21:50:56.297241" level="INFO">Clicking element '//button[@id='login']'.</msg>
+<msg time="2024-02-21T10:09:20.031296" level="INFO">Clicking element '//button[@id='login']'.</msg>
 <arg>//button[@id='login']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-20T21:50:56.296211" elapsed="0.249169"/>
+<status status="PASS" start="2024-02-21T10:09:20.030250" elapsed="0.298848"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>//label[@id='welcomePhrase']</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-02-20T21:50:56.545380" elapsed="0.038865"/>
+<status status="PASS" start="2024-02-21T10:09:20.330190" elapsed="0.124879"/>
 </kw>
 <arg>${userEmail}</arg>
 <arg>${userPassword}</arg>
 <tag>Login</tag>
 <doc>Logs in on Rental Website</doc>
-<status status="PASS" start="2024-02-20T21:50:55.847596" elapsed="0.736649"/>
+<status status="PASS" start="2024-02-21T10:09:19.431839" elapsed="1.024278"/>
 </kw>
-<arg>not ${logged_in}</arg>
-<arg>LogInRental</arg>
-<arg>${userEmail}</arg>
-<arg>${userPassword}</arg>
-<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" start="2024-02-20T21:50:55.846532" elapsed="0.737713"/>
-</kw>
-<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>//label[@id='welcomePhrase']</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-02-20T21:50:56.585317" elapsed="0.024868"/>
-</kw>
-<tag>AssureLoggedIn</tag>
-<doc>Checks if logged in, Logs in if false.</doc>
-<status status="PASS" start="2024-02-20T21:50:55.841001" elapsed="0.770258"/>
-</kw>
-<kw name="CancelBooking" owner="BokaBilResources">
+<kw name="When I attempt to book car" owner="BokaBilResources">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-20T21:50:56.611259" level="INFO">Clicking element '//button[@id='mypage']'.</msg>
-<arg>//button[@id='mypage']</arg>
+<msg time="2024-02-21T10:09:20.459438" level="INFO">Clicking element '//button[@id='continue']'.</msg>
+<arg>//button[@id='continue']</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-20T21:50:56.611259" elapsed="0.122977"/>
+<status status="PASS" start="2024-02-21T10:09:20.458921" elapsed="0.643126"/>
 </kw>
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
-<arg>//button[@id='unBook3']</arg>
+<arg>//h1[@id='questionText']</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-02-20T21:50:56.734236" elapsed="0.037851"/>
+<status status="PASS" start="2024-02-21T10:09:21.103378" elapsed="0.041735"/>
 </kw>
-<kw name="FindIndexOfBookedCar" owner="BokaBilResources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-21T10:09:21.146719" level="INFO">Clicking element '//input[@id='bookTTpass5']'.</msg>
+<arg>${CarToBeBooked}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-21T10:09:21.146206" elapsed="0.209502"/>
+</kw>
+<tag>BookCar</tag>
+<doc>Attempt to book volvoXC90</doc>
+<status status="PASS" start="2024-02-21T10:09:20.457673" elapsed="0.898035"/>
+</kw>
+<kw name="And I fill in booking" owner="BokaBilResources">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//h1[@id='questionText']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-21T10:09:21.357719" elapsed="0.055333"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-21T10:09:21.415046" level="INFO">Typing text '5555777733331111' into text field '//input[@id='cardNum']'.</msg>
+<arg>//input[@id='cardNum']</arg>
+<arg>5555777733331111</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-21T10:09:21.414048" elapsed="0.431599"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-21T10:09:21.847660" level="INFO">Typing text 'Robot Selenium' into text field '//input[@id='fullName']'.</msg>
+<arg>//input[@id='fullName']</arg>
+<arg>Robot Selenium</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-21T10:09:21.846662" elapsed="0.482987"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-02-21T10:09:22.332278" level="INFO">Selecting options from selection list '//select[@title='Month']' by label 5.</msg>
+<arg>//select[@title='Month']</arg>
+<arg>5</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-02-21T10:09:22.330704" elapsed="0.335326"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-02-21T10:09:22.668207" level="INFO">Selecting options from selection list '//select[@title='Year']' by label 2025.</msg>
+<arg>//select[@title='Year']</arg>
+<arg>2025</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-02-21T10:09:22.667205" elapsed="0.289952"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-21T10:09:22.960335" level="INFO">Typing text '888' into text field '//input[@id='cvc']'.</msg>
+<arg>//input[@id='cvc']</arg>
+<arg>888</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-21T10:09:22.958169" elapsed="0.367637"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-21T10:09:23.327399" level="INFO">Clicking element '//button[@id='confirm']'.</msg>
+<arg>//button[@id='confirm']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-21T10:09:23.325806" elapsed="0.339029"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//h1[@id='questionTextSmall']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-21T10:09:23.665854" elapsed="0.101481"/>
+</kw>
+<tag>Fill in form</tag>
+<doc>Fill in the form to book a car</doc>
+<status status="PASS" start="2024-02-21T10:09:21.356722" elapsed="2.410613"/>
+</kw>
+<kw name="Then Booked car should be added to my page" owner="BokaBilResources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-21T10:09:23.770166" level="INFO">Clicking element '//form[@name='logOut']//button[@id='mypage']'.</msg>
+<arg>//form[@name='logOut']//button[@id='mypage']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-21T10:09:23.770166" elapsed="0.286400"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//h1[@id='historyText']</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-21T10:09:24.057099" elapsed="0.102639"/>
+</kw>
 <kw name="CreateListofLicenceNumbers" owner="BokaBilResources">
 <kw name="Create List" owner="BuiltIn">
-<msg time="2024-02-20T21:50:56.774148" level="INFO">@{productTitles} = [ ]</msg>
+<msg time="2024-02-21T10:09:24.164263" level="INFO">@{productTitles} = [ ]</msg>
 <var>@{productTitles}</var>
 <doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2024-02-20T21:50:56.773117" elapsed="0.001031"/>
+<status status="PASS" start="2024-02-21T10:09:24.163229" elapsed="0.002025"/>
 </kw>
 <for flavor="IN RANGE">
 <iter>
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-02-20T21:50:56.804899" level="INFO">Element '//td[@id='licenseNumber1']' is displayed.</msg>
+<msg time="2024-02-21T10:09:24.259865" level="INFO">Element '//td[@id='licenseNumber1']' is displayed.</msg>
 <arg>//td[@id='licenseNumber${locatorIndex}']</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-02-20T21:50:56.776289" elapsed="0.028610"/>
+<status status="PASS" start="2024-02-21T10:09:24.168874" elapsed="0.090991"/>
 </kw>
-<msg time="2024-02-20T21:50:56.804899" level="INFO">${element_present} = True</msg>
+<msg time="2024-02-21T10:09:24.260884" level="INFO">${element_present} = True</msg>
 <var>${element_present}</var>
 <arg>Element Should Be Visible</arg>
 <arg>//td[@id='licenseNumber${locatorIndex}']</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2024-02-20T21:50:56.775145" elapsed="0.030791"/>
+<status status="PASS" start="2024-02-21T10:09:24.167820" elapsed="0.094111"/>
 </kw>
 <if>
 <branch type="IF" condition="${element_present} == True">
 <kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T21:50:56.818805" level="INFO">@{WebpageProducts} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="61dcf4ec901235964a0c139be6fdd938", element="A17B72D29C489C0EBA98D60A0657ECA0_element_41")&gt; ]</msg>
+<msg time="2024-02-21T10:09:24.296131" level="INFO">@{WebpageProducts} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="9860641d211abf7508c77fa14daf5afa", element="879B4EC1EABF0AE5A009677818C44FD9_element_133")&gt; ]</msg>
 <var>@{WebpageProducts}</var>
 <arg>//td[@id='licenseNumber${locatorIndex}']</arg>
 <doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T21:50:56.805936" elapsed="0.012869"/>
+<status status="PASS" start="2024-02-21T10:09:24.263915" elapsed="0.033167"/>
 </kw>
 <for flavor="IN">
 <iter>
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-02-20T21:50:56.839461" level="INFO">${product_title} = BBE465</msg>
+<msg time="2024-02-21T10:09:24.353516" level="INFO">${product_title} = BBE465</msg>
 <var>${product_title}</var>
 <arg>${element}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-20T21:50:56.819929" elapsed="0.019532"/>
+<status status="PASS" start="2024-02-21T10:09:24.299665" elapsed="0.054912"/>
 </kw>
 <kw name="Append To List" owner="Collections">
 <arg>${productTitles}</arg>
 <arg>${product_title}</arg>
 <doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2024-02-20T21:50:56.839461" elapsed="0.000996"/>
+<status status="PASS" start="2024-02-21T10:09:24.355526" elapsed="0.001675"/>
 </kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="61dcf4ec901235964a0c139be6fdd938", element="A17B72D29C489C0EBA98D60A0657ECA0_element_41")&gt;</var>
-<status status="PASS" start="2024-02-20T21:50:56.818805" elapsed="0.021652"/>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="9860641d211abf7508c77fa14daf5afa", element="879B4EC1EABF0AE5A009677818C44FD9_element_133")&gt;</var>
+<status status="PASS" start="2024-02-21T10:09:24.298669" elapsed="0.058532"/>
 </iter>
 <var>${element}</var>
 <value>@{WebpageProducts}</value>
-<status status="PASS" start="2024-02-20T21:50:56.818805" elapsed="0.022652"/>
+<status status="PASS" start="2024-02-21T10:09:24.297661" elapsed="0.060547"/>
 </for>
-<status status="PASS" start="2024-02-20T21:50:56.805936" elapsed="0.035521"/>
+<status status="PASS" start="2024-02-21T10:09:24.261931" elapsed="0.097326"/>
 </branch>
 <branch type="ELSE">
 <break>
-<status status="NOT RUN" start="2024-02-20T21:50:56.841457" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-02-21T10:09:24.360272" elapsed="0.001036"/>
 </break>
-<status status="NOT RUN" start="2024-02-20T21:50:56.841457" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-02-21T10:09:24.359257" elapsed="0.002051"/>
 </branch>
-<status status="PASS" start="2024-02-20T21:50:56.805936" elapsed="0.035521"/>
+<status status="PASS" start="2024-02-21T10:09:24.261931" elapsed="0.099377"/>
 </if>
 <var name="${locatorIndex}">1</var>
-<status status="PASS" start="2024-02-20T21:50:56.775145" elapsed="0.067310"/>
+<status status="PASS" start="2024-02-21T10:09:24.167254" elapsed="0.195017"/>
 </iter>
 <iter>
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-02-20T21:50:56.873855" level="INFO">Element '//td[@id='licenseNumber2']' is displayed.</msg>
+<msg time="2024-02-21T10:09:24.450892" level="INFO">Element '//td[@id='licenseNumber2']' is displayed.</msg>
 <arg>//td[@id='licenseNumber${locatorIndex}']</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-02-20T21:50:56.843478" elapsed="0.030377"/>
+<status status="PASS" start="2024-02-21T10:09:24.364304" elapsed="0.086588"/>
 </kw>
-<msg time="2024-02-20T21:50:56.873855" level="INFO">${element_present} = True</msg>
+<msg time="2024-02-21T10:09:24.451889" level="INFO">${element_present} = True</msg>
 <var>${element_present}</var>
 <arg>Element Should Be Visible</arg>
 <arg>//td[@id='licenseNumber${locatorIndex}']</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2024-02-20T21:50:56.842455" elapsed="0.031400"/>
+<status status="PASS" start="2024-02-21T10:09:24.363261" elapsed="0.089619"/>
 </kw>
 <if>
 <branch type="IF" condition="${element_present} == True">
 <kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T21:50:56.888621" level="INFO">@{WebpageProducts} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="61dcf4ec901235964a0c139be6fdd938", element="A17B72D29C489C0EBA98D60A0657ECA0_element_42")&gt; ]</msg>
+<msg time="2024-02-21T10:09:24.492778" level="INFO">@{WebpageProducts} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="9860641d211abf7508c77fa14daf5afa", element="879B4EC1EABF0AE5A009677818C44FD9_element_134")&gt; ]</msg>
 <var>@{WebpageProducts}</var>
 <arg>//td[@id='licenseNumber${locatorIndex}']</arg>
 <doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T21:50:56.875124" elapsed="0.013497"/>
+<status status="PASS" start="2024-02-21T10:09:24.454918" elapsed="0.038823"/>
 </kw>
 <for flavor="IN">
 <iter>
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-02-20T21:50:56.902783" level="INFO">${product_title} = BDE463</msg>
+<msg time="2024-02-21T10:09:24.531558" level="INFO">${product_title} = BDE463</msg>
 <var>${product_title}</var>
 <arg>${element}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-20T21:50:56.889763" elapsed="0.013020"/>
+<status status="PASS" start="2024-02-21T10:09:24.495732" elapsed="0.035826"/>
 </kw>
 <kw name="Append To List" owner="Collections">
 <arg>${productTitles}</arg>
 <arg>${product_title}</arg>
 <doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2024-02-20T21:50:56.902783" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-21T10:09:24.532556" elapsed="0.000998"/>
 </kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="61dcf4ec901235964a0c139be6fdd938", element="A17B72D29C489C0EBA98D60A0657ECA0_element_42")&gt;</var>
-<status status="PASS" start="2024-02-20T21:50:56.888621" elapsed="0.014162"/>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="9860641d211abf7508c77fa14daf5afa", element="879B4EC1EABF0AE5A009677818C44FD9_element_134")&gt;</var>
+<status status="PASS" start="2024-02-21T10:09:24.494734" elapsed="0.039816"/>
 </iter>
 <var>${element}</var>
 <value>@{WebpageProducts}</value>
-<status status="PASS" start="2024-02-20T21:50:56.888621" elapsed="0.014162"/>
+<status status="PASS" start="2024-02-21T10:09:24.493741" elapsed="0.041387"/>
 </for>
-<status status="PASS" start="2024-02-20T21:50:56.874929" elapsed="0.027854"/>
+<status status="PASS" start="2024-02-21T10:09:24.453920" elapsed="0.081208"/>
 </branch>
 <branch type="ELSE">
 <break>
-<status status="NOT RUN" start="2024-02-20T21:50:56.903792" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-02-21T10:09:24.536191" elapsed="0.000000"/>
 </break>
-<status status="NOT RUN" start="2024-02-20T21:50:56.903792" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-02-21T10:09:24.535128" elapsed="0.002056"/>
 </branch>
-<status status="PASS" start="2024-02-20T21:50:56.873855" elapsed="0.029937"/>
+<status status="PASS" start="2024-02-21T10:09:24.452880" elapsed="0.084304"/>
 </if>
 <var name="${locatorIndex}">2</var>
-<status status="PASS" start="2024-02-20T21:50:56.842455" elapsed="0.061337"/>
+<status status="PASS" start="2024-02-21T10:09:24.363261" elapsed="0.173923"/>
 </iter>
 <iter>
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-02-20T21:50:56.931823" level="INFO">Element '//td[@id='licenseNumber3']' is displayed.</msg>
+<msg time="2024-02-21T10:09:24.625361" level="INFO">Element '//td[@id='licenseNumber3']' is displayed.</msg>
 <arg>//td[@id='licenseNumber${locatorIndex}']</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-02-20T21:50:56.903792" elapsed="0.028031"/>
+<status status="PASS" start="2024-02-21T10:09:24.539787" elapsed="0.085574"/>
 </kw>
-<msg time="2024-02-20T21:50:56.931823" level="INFO">${element_present} = True</msg>
+<msg time="2024-02-21T10:09:24.626362" level="INFO">${element_present} = True</msg>
 <var>${element_present}</var>
 <arg>Element Should Be Visible</arg>
 <arg>//td[@id='licenseNumber${locatorIndex}']</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2024-02-20T21:50:56.903792" elapsed="0.028031"/>
+<status status="PASS" start="2024-02-21T10:09:24.538821" elapsed="0.087541"/>
 </kw>
 <if>
 <branch type="IF" condition="${element_present} == True">
 <kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T21:50:56.944260" level="INFO">@{WebpageProducts} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="61dcf4ec901235964a0c139be6fdd938", element="A17B72D29C489C0EBA98D60A0657ECA0_element_43")&gt; ]</msg>
+<msg time="2024-02-21T10:09:24.660681" level="INFO">@{WebpageProducts} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="9860641d211abf7508c77fa14daf5afa", element="879B4EC1EABF0AE5A009677818C44FD9_element_135")&gt; ]</msg>
 <var>@{WebpageProducts}</var>
 <arg>//td[@id='licenseNumber${locatorIndex}']</arg>
 <doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T21:50:56.933006" elapsed="0.011254"/>
+<status status="PASS" start="2024-02-21T10:09:24.628782" elapsed="0.032902"/>
 </kw>
 <for flavor="IN">
 <iter>
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-02-20T21:50:56.958032" level="INFO">${product_title} = BBE465</msg>
+<msg time="2024-02-21T10:09:24.700025" level="INFO">${product_title} = BBE465</msg>
 <var>${product_title}</var>
 <arg>${element}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-20T21:50:56.945407" elapsed="0.013694"/>
+<status status="PASS" start="2024-02-21T10:09:24.663728" elapsed="0.036297"/>
 </kw>
 <kw name="Append To List" owner="Collections">
 <arg>${productTitles}</arg>
 <arg>${product_title}</arg>
 <doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2024-02-20T21:50:56.959224" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-21T10:09:24.701044" elapsed="0.000995"/>
 </kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="61dcf4ec901235964a0c139be6fdd938", element="A17B72D29C489C0EBA98D60A0657ECA0_element_43")&gt;</var>
-<status status="PASS" start="2024-02-20T21:50:56.945407" elapsed="0.013817"/>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="9860641d211abf7508c77fa14daf5afa", element="879B4EC1EABF0AE5A009677818C44FD9_element_135")&gt;</var>
+<status status="PASS" start="2024-02-21T10:09:24.663728" elapsed="0.039312"/>
 </iter>
 <var>${element}</var>
 <value>@{WebpageProducts}</value>
-<status status="PASS" start="2024-02-20T21:50:56.944260" elapsed="0.014964"/>
+<status status="PASS" start="2024-02-21T10:09:24.662679" elapsed="0.041397"/>
 </for>
-<status status="PASS" start="2024-02-20T21:50:56.933006" elapsed="0.026218"/>
+<status status="PASS" start="2024-02-21T10:09:24.627356" elapsed="0.077684"/>
 </branch>
 <branch type="ELSE">
 <break>
-<status status="NOT RUN" start="2024-02-20T21:50:56.959224" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-02-21T10:09:24.706076" elapsed="0.000000"/>
 </break>
-<status status="NOT RUN" start="2024-02-20T21:50:56.959224" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-02-21T10:09:24.705040" elapsed="0.002034"/>
 </branch>
-<status status="PASS" start="2024-02-20T21:50:56.933006" elapsed="0.026218"/>
+<status status="PASS" start="2024-02-21T10:09:24.627356" elapsed="0.080242"/>
 </if>
 <var name="${locatorIndex}">3</var>
-<status status="PASS" start="2024-02-20T21:50:56.903792" elapsed="0.055432"/>
+<status status="PASS" start="2024-02-21T10:09:24.537764" elapsed="0.169834"/>
 </iter>
 <iter>
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-02-20T21:50:56.988390" level="INFO">Element '//td[@id='licenseNumber4']' is displayed.</msg>
+<msg time="2024-02-21T10:09:24.799052" level="INFO">Element '//td[@id='licenseNumber4']' is displayed.</msg>
 <arg>//td[@id='licenseNumber${locatorIndex}']</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-02-20T21:50:56.960385" elapsed="0.028005"/>
+<status status="PASS" start="2024-02-21T10:09:24.712595" elapsed="0.087911"/>
 </kw>
-<msg time="2024-02-20T21:50:56.989501" level="INFO">${element_present} = True</msg>
+<msg time="2024-02-21T10:09:24.801530" level="INFO">${element_present} = True</msg>
 <var>${element_present}</var>
 <arg>Element Should Be Visible</arg>
 <arg>//td[@id='licenseNumber${locatorIndex}']</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2024-02-20T21:50:56.960385" elapsed="0.029116"/>
+<status status="PASS" start="2024-02-21T10:09:24.710598" elapsed="0.090932"/>
 </kw>
 <if>
 <branch type="IF" condition="${element_present} == True">
 <kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T21:50:57.001956" level="INFO">@{WebpageProducts} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="61dcf4ec901235964a0c139be6fdd938", element="A17B72D29C489C0EBA98D60A0657ECA0_element_44")&gt; ]</msg>
+<msg time="2024-02-21T10:09:24.835071" level="INFO">@{WebpageProducts} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="9860641d211abf7508c77fa14daf5afa", element="879B4EC1EABF0AE5A009677818C44FD9_element_136")&gt; ]</msg>
 <var>@{WebpageProducts}</var>
 <arg>//td[@id='licenseNumber${locatorIndex}']</arg>
 <doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T21:50:56.989501" elapsed="0.012455"/>
+<status status="PASS" start="2024-02-21T10:09:24.803567" elapsed="0.031504"/>
 </kw>
 <for flavor="IN">
 <iter>
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-02-20T21:50:57.015081" level="INFO">${product_title} = DHW439</msg>
+<msg time="2024-02-21T10:09:24.873258" level="INFO">${product_title} = DHW439</msg>
 <var>${product_title}</var>
 <arg>${element}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-20T21:50:57.003079" elapsed="0.012002"/>
+<status status="PASS" start="2024-02-21T10:09:24.838149" elapsed="0.035109"/>
 </kw>
 <kw name="Append To List" owner="Collections">
 <arg>${productTitles}</arg>
 <arg>${product_title}</arg>
 <doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2024-02-20T21:50:57.016245" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-21T10:09:24.874267" elapsed="0.000997"/>
 </kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="61dcf4ec901235964a0c139be6fdd938", element="A17B72D29C489C0EBA98D60A0657ECA0_element_44")&gt;</var>
-<status status="PASS" start="2024-02-20T21:50:57.003079" elapsed="0.013166"/>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="9860641d211abf7508c77fa14daf5afa", element="879B4EC1EABF0AE5A009677818C44FD9_element_136")&gt;</var>
+<status status="PASS" start="2024-02-21T10:09:24.837145" elapsed="0.039107"/>
 </iter>
 <var>${element}</var>
 <value>@{WebpageProducts}</value>
-<status status="PASS" start="2024-02-20T21:50:57.001956" elapsed="0.014289"/>
+<status status="PASS" start="2024-02-21T10:09:24.835071" elapsed="0.041181"/>
 </for>
-<status status="PASS" start="2024-02-20T21:50:56.989501" elapsed="0.026744"/>
+<status status="PASS" start="2024-02-21T10:09:24.802529" elapsed="0.073723"/>
 </branch>
 <branch type="ELSE">
 <break>
-<status status="NOT RUN" start="2024-02-20T21:50:57.016245" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-02-21T10:09:24.877784" elapsed="0.000000"/>
 </break>
-<status status="NOT RUN" start="2024-02-20T21:50:57.016245" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-02-21T10:09:24.877255" elapsed="0.000529"/>
 </branch>
-<status status="PASS" start="2024-02-20T21:50:56.989501" elapsed="0.026744"/>
+<status status="PASS" start="2024-02-21T10:09:24.802529" elapsed="0.076263"/>
 </if>
 <var name="${locatorIndex}">4</var>
-<status status="PASS" start="2024-02-20T21:50:56.960385" elapsed="0.055860"/>
+<status status="PASS" start="2024-02-21T10:09:24.709626" elapsed="0.169166"/>
 </iter>
 <iter>
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-02-20T21:50:57.159511" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-55.png"&gt;&lt;img src="selenium-screenshot-55.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-02-20T21:50:57.160511" level="FAIL">Element with locator '//td[@id='licenseNumber5']' not found.</msg>
+<msg time="2024-02-21T10:09:25.227210" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-57.png"&gt;&lt;img src="selenium-screenshot-57.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-02-21T10:09:25.228247" level="FAIL">Element with locator '//td[@id='licenseNumber5']' not found.</msg>
 <arg>//td[@id='licenseNumber${locatorIndex}']</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="FAIL" start="2024-02-20T21:50:57.017429" elapsed="0.146189">Element with locator '//td[@id='licenseNumber5']' not found.</status>
+<status status="FAIL" start="2024-02-21T10:09:24.881793" elapsed="0.367679">Element with locator '//td[@id='licenseNumber5']' not found.</status>
 </kw>
-<msg time="2024-02-20T21:50:57.163618" level="INFO">${element_present} = False</msg>
+<msg time="2024-02-21T10:09:25.250521" level="INFO">${element_present} = False</msg>
 <var>${element_present}</var>
 <arg>Element Should Be Visible</arg>
 <arg>//td[@id='licenseNumber${locatorIndex}']</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2024-02-20T21:50:57.017429" elapsed="0.146189"/>
+<status status="PASS" start="2024-02-21T10:09:24.879788" elapsed="0.370733"/>
 </kw>
 <if>
 <branch type="IF" condition="${element_present} == True">
@@ -383,7 +413,7 @@
 <var>@{WebpageProducts}</var>
 <arg>//td[@id='licenseNumber${locatorIndex}']</arg>
 <doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T21:50:57.164701" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-02-21T10:09:25.251522" elapsed="0.000000"/>
 </kw>
 <for flavor="IN">
 <iter>
@@ -391,373 +421,75 @@
 <var>${product_title}</var>
 <arg>${element}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T21:50:57.164701" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-02-21T10:09:25.253471" elapsed="0.000000"/>
 </kw>
 <kw name="Append To List" owner="Collections">
 <arg>${productTitles}</arg>
 <arg>${product_title}</arg>
 <doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T21:50:57.164701" elapsed="0.001070"/>
+<status status="NOT RUN" start="2024-02-21T10:09:25.254513" elapsed="0.000000"/>
 </kw>
 <var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T21:50:57.164701" elapsed="0.001070"/>
+<status status="NOT RUN" start="2024-02-21T10:09:25.252474" elapsed="0.002039"/>
 </iter>
 <var>${element}</var>
 <value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T21:50:57.164701" elapsed="0.001070"/>
+<status status="NOT RUN" start="2024-02-21T10:09:25.252474" elapsed="0.003039"/>
 </for>
-<status status="NOT RUN" start="2024-02-20T21:50:57.164701" elapsed="0.001070"/>
+<status status="NOT RUN" start="2024-02-21T10:09:25.250521" elapsed="0.004992"/>
 </branch>
 <branch type="ELSE">
 <break>
-<status status="PASS" start="2024-02-20T21:50:57.165771" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-21T10:09:25.255513" elapsed="0.000000"/>
 </break>
-<status status="PASS" start="2024-02-20T21:50:57.165771" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-21T10:09:25.255513" elapsed="0.000000"/>
 </branch>
-<status status="PASS" start="2024-02-20T21:50:57.164701" elapsed="0.001070"/>
+<status status="PASS" start="2024-02-21T10:09:25.250521" elapsed="0.006549"/>
 </if>
 <var name="${locatorIndex}">5</var>
-<status status="PASS" start="2024-02-20T21:50:57.017429" elapsed="0.148342"/>
+<status status="PASS" start="2024-02-21T10:09:24.879788" elapsed="0.377404"/>
 </iter>
 <var>${locatorIndex}</var>
 <value>1</value>
 <value>100</value>
-<status status="PASS" start="2024-02-20T21:50:56.774148" elapsed="0.391623"/>
+<status status="PASS" start="2024-02-21T10:09:24.165254" elapsed="1.091938"/>
 </for>
 <return>
 <value>${productTitles}</value>
-<status status="PASS" start="2024-02-20T21:50:57.165771" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-21T10:09:25.257192" elapsed="0.000996"/>
 </return>
-<msg time="2024-02-20T21:50:57.165771" level="INFO">${BookedCars} = ['BBE465', 'BDE463', 'BBE465', 'DHW439']</msg>
-<var>${BookedCars}</var>
-<tag>AllBookedCars</tag>
-<doc>Creates a list of licence numbers of all booked cars</doc>
-<status status="PASS" start="2024-02-20T21:50:56.773117" elapsed="0.393719"/>
-</kw>
-<kw name="Get Index From List" owner="Collections">
-<msg time="2024-02-20T21:50:57.166836" level="INFO">${index} = 3</msg>
-<var>${index}</var>
-<arg>${BookedCars}</arg>
-<arg>${LPOfBookedCar}</arg>
-<doc>Returns the index of the first occurrence of the ``value`` on the list.</doc>
-<status status="PASS" start="2024-02-20T21:50:57.166836" elapsed="0.000000"/>
-</kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-02-20T21:50:57.166836" level="INFO">${indexPlusOne} = 4</msg>
-<var>${indexPlusOne}</var>
-<arg>${index} + 1</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-02-20T21:50:57.166836" elapsed="0.001065"/>
-</kw>
-<return>
-<value>${indexPlusOne}</value>
-<status status="PASS" start="2024-02-20T21:50:57.167901" elapsed="0.000000"/>
-</return>
-<msg time="2024-02-20T21:50:57.167901" level="INFO">${IndexOfCar} = 4</msg>
-<var>${IndexOfCar}</var>
-<tag>indexList</tag>
-<doc>returns index of the booked car</doc>
-<status status="PASS" start="2024-02-20T21:50:56.772087" elapsed="0.395814"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-20T21:50:57.167901" level="INFO">Clicking element '//button[@id='unBook4']'.</msg>
-<arg>//button[@id='unBook${IndexOfCar}']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-20T21:50:57.167901" elapsed="0.074252"/>
-</kw>
-<kw name="Handle Alert" owner="SeleniumLibrary">
-<msg time="2024-02-20T21:50:57.242153" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
-<doc>Handles the current alert and returns its message.</doc>
-<status status="PASS" start="2024-02-20T21:50:57.242153" elapsed="0.006985"/>
-</kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-20T21:50:57.250133" level="INFO">Clicking element '//button[@id='mypage']'.</msg>
-<arg>//button[@id='mypage']</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-20T21:50:57.250133" elapsed="0.179347"/>
-</kw>
-<tag>Cancel</tag>
-<doc>Cancels a booking and returns to myPage</doc>
-<status status="PASS" start="2024-02-20T21:50:56.611259" elapsed="0.818221"/>
-</kw>
-<kw name="VerifyCancelation" owner="BokaBilResources">
-<kw name="CreateListofLicenceNumbers" owner="BokaBilResources">
-<kw name="Create List" owner="BuiltIn">
-<msg time="2024-02-20T21:50:57.432841" level="INFO">@{productTitles} = [ ]</msg>
-<var>@{productTitles}</var>
-<doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2024-02-20T21:50:57.431737" elapsed="0.001104"/>
-</kw>
-<for flavor="IN RANGE">
-<iter>
-<kw name="Run Keyword And Return Status" owner="BuiltIn">
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-02-20T21:50:57.471361" level="INFO">Element '//td[@id='licenseNumber1']' is displayed.</msg>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-02-20T21:50:57.435064" elapsed="0.036297"/>
-</kw>
-<msg time="2024-02-20T21:50:57.471361" level="INFO">${element_present} = True</msg>
-<var>${element_present}</var>
-<arg>Element Should Be Visible</arg>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2024-02-20T21:50:57.434065" elapsed="0.037296"/>
-</kw>
-<if>
-<branch type="IF" condition="${element_present} == True">
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T21:50:57.484761" level="INFO">@{WebpageProducts} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="61dcf4ec901235964a0c139be6fdd938", element="D6455ACDF401B88778CE043EFDBD745B_element_59")&gt; ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T21:50:57.472435" elapsed="0.012326"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-02-20T21:50:57.499808" level="INFO">${product_title} = BBE465</msg>
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-20T21:50:57.485842" elapsed="0.013966"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2024-02-20T21:50:57.499808" elapsed="0.001033"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="61dcf4ec901235964a0c139be6fdd938", element="D6455ACDF401B88778CE043EFDBD745B_element_59")&gt;</var>
-<status status="PASS" start="2024-02-20T21:50:57.485842" elapsed="0.014999"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="PASS" start="2024-02-20T21:50:57.484761" elapsed="0.016080"/>
-</for>
-<status status="PASS" start="2024-02-20T21:50:57.471361" elapsed="0.029480"/>
-</branch>
-<branch type="ELSE">
-<break>
-<status status="NOT RUN" start="2024-02-20T21:50:57.500841" elapsed="0.000000"/>
-</break>
-<status status="NOT RUN" start="2024-02-20T21:50:57.500841" elapsed="0.000000"/>
-</branch>
-<status status="PASS" start="2024-02-20T21:50:57.471361" elapsed="0.029480"/>
-</if>
-<var name="${locatorIndex}">1</var>
-<status status="PASS" start="2024-02-20T21:50:57.434065" elapsed="0.066776"/>
-</iter>
-<iter>
-<kw name="Run Keyword And Return Status" owner="BuiltIn">
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-02-20T21:50:57.530265" level="INFO">Element '//td[@id='licenseNumber2']' is displayed.</msg>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-02-20T21:50:57.501902" elapsed="0.028363"/>
-</kw>
-<msg time="2024-02-20T21:50:57.530265" level="INFO">${element_present} = True</msg>
-<var>${element_present}</var>
-<arg>Element Should Be Visible</arg>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2024-02-20T21:50:57.501902" elapsed="0.028363"/>
-</kw>
-<if>
-<branch type="IF" condition="${element_present} == True">
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T21:50:57.541859" level="INFO">@{WebpageProducts} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="61dcf4ec901235964a0c139be6fdd938", element="D6455ACDF401B88778CE043EFDBD745B_element_60")&gt; ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T21:50:57.531298" elapsed="0.011558"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-02-20T21:50:57.556001" level="INFO">${product_title} = BDE463</msg>
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-20T21:50:57.542912" elapsed="0.013089"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2024-02-20T21:50:57.557001" elapsed="0.000000"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="61dcf4ec901235964a0c139be6fdd938", element="D6455ACDF401B88778CE043EFDBD745B_element_60")&gt;</var>
-<status status="PASS" start="2024-02-20T21:50:57.542912" elapsed="0.014089"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="PASS" start="2024-02-20T21:50:57.542912" elapsed="0.015086"/>
-</for>
-<status status="PASS" start="2024-02-20T21:50:57.530265" elapsed="0.027840"/>
-</branch>
-<branch type="ELSE">
-<break>
-<status status="NOT RUN" start="2024-02-20T21:50:57.558105" elapsed="0.000000"/>
-</break>
-<status status="NOT RUN" start="2024-02-20T21:50:57.558105" elapsed="0.001140"/>
-</branch>
-<status status="PASS" start="2024-02-20T21:50:57.530265" elapsed="0.028980"/>
-</if>
-<var name="${locatorIndex}">2</var>
-<status status="PASS" start="2024-02-20T21:50:57.500841" elapsed="0.058404"/>
-</iter>
-<iter>
-<kw name="Run Keyword And Return Status" owner="BuiltIn">
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-02-20T21:50:57.585859" level="INFO">Element '//td[@id='licenseNumber3']' is displayed.</msg>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2024-02-20T21:50:57.559245" elapsed="0.026614"/>
-</kw>
-<msg time="2024-02-20T21:50:57.585859" level="INFO">${element_present} = True</msg>
-<var>${element_present}</var>
-<arg>Element Should Be Visible</arg>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2024-02-20T21:50:57.559245" elapsed="0.026614"/>
-</kw>
-<if>
-<branch type="IF" condition="${element_present} == True">
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2024-02-20T21:50:57.597820" level="INFO">@{WebpageProducts} = [ &lt;selenium.webdriver.remote.webelement.WebElement (session="61dcf4ec901235964a0c139be6fdd938", element="D6455ACDF401B88778CE043EFDBD745B_element_61")&gt; ]</msg>
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2024-02-20T21:50:57.586891" elapsed="0.011954"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-02-20T21:50:57.614829" level="INFO">${product_title} = BBE465</msg>
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-20T21:50:57.598969" elapsed="0.015860"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="PASS" start="2024-02-20T21:50:57.614829" elapsed="0.000000"/>
-</kw>
-<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="61dcf4ec901235964a0c139be6fdd938", element="D6455ACDF401B88778CE043EFDBD745B_element_61")&gt;</var>
-<status status="PASS" start="2024-02-20T21:50:57.598969" elapsed="0.015860"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="PASS" start="2024-02-20T21:50:57.598969" elapsed="0.015860"/>
-</for>
-<status status="PASS" start="2024-02-20T21:50:57.585859" elapsed="0.028970"/>
-</branch>
-<branch type="ELSE">
-<break>
-<status status="NOT RUN" start="2024-02-20T21:50:57.615937" elapsed="0.000000"/>
-</break>
-<status status="NOT RUN" start="2024-02-20T21:50:57.615937" elapsed="0.000000"/>
-</branch>
-<status status="PASS" start="2024-02-20T21:50:57.585859" elapsed="0.030078"/>
-</if>
-<var name="${locatorIndex}">3</var>
-<status status="PASS" start="2024-02-20T21:50:57.559245" elapsed="0.056692"/>
-</iter>
-<iter>
-<kw name="Run Keyword And Return Status" owner="BuiltIn">
-<kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2024-02-20T21:50:57.744960" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-56.png"&gt;&lt;img src="selenium-screenshot-56.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2024-02-20T21:50:57.745957" level="FAIL">Element with locator '//td[@id='licenseNumber4']' not found.</msg>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="FAIL" start="2024-02-20T21:50:57.616969" elapsed="0.130101">Element with locator '//td[@id='licenseNumber4']' not found.</status>
-</kw>
-<msg time="2024-02-20T21:50:57.747070" level="INFO">${element_present} = False</msg>
-<var>${element_present}</var>
-<arg>Element Should Be Visible</arg>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2024-02-20T21:50:57.615937" elapsed="0.131133"/>
-</kw>
-<if>
-<branch type="IF" condition="${element_present} == True">
-<kw name="Get WebElements" owner="SeleniumLibrary">
-<var>@{WebpageProducts}</var>
-<arg>//td[@id='licenseNumber${locatorIndex}']</arg>
-<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T21:50:57.747070" elapsed="0.000000"/>
-</kw>
-<for flavor="IN">
-<iter>
-<kw name="Get Text" owner="SeleniumLibrary">
-<var>${product_title}</var>
-<arg>${element}</arg>
-<doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2024-02-20T21:50:57.748142" elapsed="0.000000"/>
-</kw>
-<kw name="Append To List" owner="Collections">
-<arg>${productTitles}</arg>
-<arg>${product_title}</arg>
-<doc>Adds ``values`` to the end of ``list``.</doc>
-<status status="NOT RUN" start="2024-02-20T21:50:57.748142" elapsed="0.000000"/>
-</kw>
-<var name="${element}"/>
-<status status="NOT RUN" start="2024-02-20T21:50:57.747070" elapsed="0.001072"/>
-</iter>
-<var>${element}</var>
-<value>@{WebpageProducts}</value>
-<status status="NOT RUN" start="2024-02-20T21:50:57.747070" elapsed="0.001072"/>
-</for>
-<status status="NOT RUN" start="2024-02-20T21:50:57.747070" elapsed="0.001072"/>
-</branch>
-<branch type="ELSE">
-<break>
-<status status="PASS" start="2024-02-20T21:50:57.748142" elapsed="0.000000"/>
-</break>
-<status status="PASS" start="2024-02-20T21:50:57.748142" elapsed="0.000000"/>
-</branch>
-<status status="PASS" start="2024-02-20T21:50:57.747070" elapsed="0.001072"/>
-</if>
-<var name="${locatorIndex}">4</var>
-<status status="PASS" start="2024-02-20T21:50:57.615937" elapsed="0.132205"/>
-</iter>
-<var>${locatorIndex}</var>
-<value>1</value>
-<value>100</value>
-<status status="PASS" start="2024-02-20T21:50:57.432841" elapsed="0.315301"/>
-</for>
-<return>
-<value>${productTitles}</value>
-<status status="PASS" start="2024-02-20T21:50:57.749201" elapsed="0.000000"/>
-</return>
-<msg time="2024-02-20T21:50:57.749201" level="INFO">@{LicencePlates} = [ BBE465 | BDE463 | BBE465 ]</msg>
+<msg time="2024-02-21T10:09:25.258188" level="INFO">@{LicencePlates} = [ BBE465 | BDE463 | BBE465 | DHW439 ]</msg>
 <var>@{LicencePlates}</var>
 <tag>AllBookedCars</tag>
 <doc>Creates a list of licence numbers of all booked cars</doc>
-<status status="PASS" start="2024-02-20T21:50:57.431737" elapsed="0.317464"/>
+<status status="PASS" start="2024-02-21T10:09:24.162211" elapsed="1.097022"/>
 </kw>
-<kw name="List Should Not Contain Value" owner="Collections">
-<msg time="2024-02-20T21:50:57.749201" level="INFO">False</msg>
+<kw name="List Should Contain Value" owner="Collections">
+<msg time="2024-02-21T10:09:25.260184" level="INFO">False</msg>
 <arg>${LicencePlates}</arg>
 <arg>${LPOfBookedCar}</arg>
-<doc>Fails if the ``value`` is found from ``list``.</doc>
-<status status="PASS" start="2024-02-20T21:50:57.749201" elapsed="0.000000"/>
+<doc>Fails if the ``value`` is not found from ``list``.</doc>
+<status status="PASS" start="2024-02-21T10:09:25.259233" elapsed="0.002044"/>
 </kw>
-<tag>VerifyCancel</tag>
-<doc>Verifies a previously booked car is removed when canceled</doc>
-<status status="PASS" start="2024-02-20T21:50:57.430476" elapsed="0.318725"/>
+<tag>BookedCars</tag>
+<doc>Verifies that the car is added to my Page</doc>
+<status status="PASS" start="2024-02-21T10:09:23.768334" elapsed="1.492943"/>
 </kw>
-<tag>CancelAndVerify</tag>
-<doc>Checks if logged in, logs in if not and then cancels a booking and verifies it is removed from myPage.</doc>
-<status status="PASS" start="2024-02-20T21:50:55.840013" elapsed="1.909188"/>
+<kw name="And I Log Out" owner="BokaBilResources">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-21T10:09:25.264284" level="INFO">Clicking element '//button[@id='logout']'.</msg>
+<arg>//button[@id='logout']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-21T10:09:25.263287" elapsed="0.242387"/>
 </kw>
-<status status="PASS" start="2024-02-20T21:50:55.839007" elapsed="1.911253"/>
+<tag>Logout</tag>
+<doc>Logs out from rental</doc>
+<status status="PASS" start="2024-02-21T10:09:25.262290" elapsed="0.245024"/>
+</kw>
+<status status="PASS" start="2024-02-21T10:09:19.429812" elapsed="6.077502"/>
 </test>
 <doc>resource fil för test av boka bil</doc>
-<status status="PASS" start="2024-02-20T21:50:53.285775" elapsed="4.464485"/>
+<status status="PASS" start="2024-02-21T10:09:14.672710" elapsed="10.839609"/>
 </suite>
 <statistics>
 <total>

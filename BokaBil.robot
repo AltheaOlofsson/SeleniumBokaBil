@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation   resource fil för test av boka bil
+Documentation   TestFile för att boka bil
 Library     SeleniumLibrary
 Resource    BokaBilResources.robot
 Suite Setup     SetupBrowser    ${urlRental}
@@ -9,26 +9,19 @@ Suite Setup     SetupBrowser    ${urlRental}
 
 *** Test Cases ***
 BookCarWhenLoggedIn
-    LogInRental     ${userEmail}    ${userPassword}
-    AttemptToBookVolvo
-    FillInBooking
-    VerifyCarToBeBooked
-    LogOut
+    Given I log in to rental    ${userEmail}    ${userPassword}
+    When I attempt to book car
+    And I fill in booking
+    Then Booked car should be added to my page
+    And I Log Out
 
-BookCarGherkin
-    Given IAmLoggedIn
-    When IBookACarAndFillInPayment
-    Then CarShouldBeAddedToMyPage
 
 CancelBookingOfCar
-    CancelAndVerifyBooking
-
-
+    Given I make sure I am logged in
+    When I cancel a booking
+    Then Car should not be visible on My Page
 
 
 BookCarWhenNotLoggedIn
-    AttemptToBookVolvo
-    VerifyNotLoggedIn
-
-WrongCardFormat
-    WrongCardNumberFormatShouldProducePrompt
+    When I attempt to book car
+    Then Alert Should be presented
