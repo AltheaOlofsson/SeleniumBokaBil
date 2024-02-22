@@ -33,7 +33,7 @@ SetupBrowser
 #Login And Logout
 I log in to rental
     [Documentation]     Logs in on Rental Website
-    [Tags]      Login
+    [Tags]      Login   VG_Test
     [Arguments]     ${userEmail}    ${userPassword}
     Input Text    //input[@id='email']      ${userEmail}
     Input Text    //input[@id='password']    ${userPassword}  
@@ -49,7 +49,7 @@ Check if I am Logged In
 
 I Log Out
     [Documentation]     Logs out from rental
-    [Tags]      Logout
+    [Tags]      Logout      VG_Test
     Click Element    //button[@id='logout']
 
 I make sure I am logged in
@@ -71,7 +71,7 @@ I am at startpage
 #Select Dates
 I Select Dates
     [Documentation]     choose dates to rent car
-    [Tags]      SelectDate
+    [Tags]      SelectDate      VG_Test
     Input Text    //input[@id='start']    0228
     Click Element    //input[@id='end']
     Input Text    //input[@id='end']    0303
@@ -85,14 +85,14 @@ Search for selected dates are visible
 #Find and book Cars
 I attempt to book a car
     [Documentation]     Attempt to book Car,
-    [Tags]      BookCar
+    [Tags]      BookCar     VG_Test
     Click Element    //button[@id='continue']
     Wait Until Element Is Visible    //label[@for='start']
     Click Element    ${AudiTT}
 
 I fill in Booking
     [Documentation]     Fill in the form to book a car
-    [Tags]      Fill in form
+    [Tags]      Fill in form        VG_Test
     Wait Until Element Is Visible    //h1[@id='questionText']
     Input Text    //input[@id='cardNum']    5555777733331111
     Input Text    //input[@id='fullName']    Robot Selenium
@@ -104,7 +104,7 @@ I fill in Booking
 
 Booked car should be added to my page
     [Documentation]     Verifies that the car is added to my Page
-    [Tags]      BookedCars
+    [Tags]      BookedCars      VG_Test
     Click Element    //form[@name='logOut']//button[@id='mypage']
     Wait Until Element Is Visible    //h1[@id='historyText']
     @{LicencePlates}    CreateListofLicenceNumbers
