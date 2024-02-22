@@ -11,9 +11,11 @@ ${urlRental}    https://rental3.infotiv.net/
 ${userEmail}    robot.selenium@robot.se
 ${userPassword}     123Robot
 ${LoggedIn}     False
+${WrongEmail}   wrong.seleniumrobot.se
 #Car to be Booked
 ${AudiTT}    //input[@id='bookTTpass5']
 ${LPOfBookedCar}    DHW439
+
 
 
 
@@ -56,15 +58,36 @@ I make sure I am logged in
     ${LoginStatus}=     Run Keyword And Return Status    Check if I am Logged In    ${LoggedIn}
     Run Keyword If    not ${logged_in}    I log in to rental    ${userEmail}    ${userPassword}
     Wait Until Element Is Visible    //label[@id='welcomePhrase']
+    I am at startpage
+
+I am at startpage
+    [Documentation]     Makes sure i am at start page
+    [Tags]     Startpage
+    Click Element    //h1[@id='title']
+    Wait Until Element Is Visible    //h1[@id='questionText']
 
 
+
+#Select Dates
+I Select Dates
+    [Documentation]     choose dates to rent car
+    [Tags]      SelectDate
+    Input Text    //input[@id='start']    0228
+    Click Element    //input[@id='end']
+    Input Text    //input[@id='end']    0303
+
+Search for selected dates are visible
+    [Documentation]     verifies that the entered timeperiod is shown
+    [Tags]      verifyDateSelection
+    Click Element    //button[@id='continue']
+    Page Should Contain    2024-02-28 – 2024-03-03
 
 #Find and book Cars
-I attempt to book car
-    [Documentation]     Attempt to book Car
+I attempt to book a car
+    [Documentation]     Attempt to book Car,
     [Tags]      BookCar
     Click Element    //button[@id='continue']
-    Wait Until Element Is Visible    //h1[@id='questionText']
+    Wait Until Element Is Visible    //label[@for='start']
     Click Element    ${AudiTT}
 
 I fill in Booking
@@ -79,8 +102,6 @@ I fill in Booking
     Click Element    //button[@id='confirm']
     Wait Until Element Is Visible    //h1[@id='questionTextSmall']
 
-
-#Verifications
 Booked car should be added to my page
     [Documentation]     Verifies that the car is added to my Page
     [Tags]      BookedCars
@@ -89,6 +110,8 @@ Booked car should be added to my page
     @{LicencePlates}    CreateListofLicenceNumbers
     List Should Contain Value    ${LicencePlates}    ${LPOfBookedCar}
 
+
+#Lists
 CreateListofLicenceNumbers
     [Documentation]     Creates a list of licence numbers of all booked cars
     [Tags]    AllBookedCars
@@ -107,7 +130,6 @@ CreateListofLicenceNumbers
         END
     RETURN      ${LicencePlates}
 
-
 FindIndexOfBookedCar
     [Documentation]     returns index of the booked car
     [Tags]    indexList
@@ -120,7 +142,7 @@ FindIndexOfBookedCar
 
 
 #Cancel Bookings
-I cancel a booking   #(The third car)
+I cancel a booking
     [Documentation]     Cancels a booking and returns to myPage
     [Tags]      Cancel
     Click Element    //button[@id='mypage']
@@ -141,9 +163,21 @@ Car should not be visible on My Page
 #Negative Tests
 Alert Should be presented
     [Documentation]     Verifies that LoginPrompt is presented when booking is attempted when not logged in.
-    [Tags]      Verify
+    [Tags]      NotLoggedIn
     Alert Should Be Present
 
+I Attempt login with wrong Email
+    [Documentation]     Attempt to log in to rental with an invalid Email should produce an error message
+    [Tags]      WrongEmail
+    [Arguments]     ${WrongEmail}   ${userPassword}
+    Input Text    //input[@id='email']    ${WrongEmail}
+    Input Text    //input[@id='password']    ${userPassword}
+    Click Element    //button[@id='login']
+
+Login Error should be visible
+    [Documentation]     Attempt to log in to rental with an invalid Email should produce an error message
+    [Tags]    WrongEmailError
+    Element Should Be Visible    //label[@id='signInError']
 
 
 
