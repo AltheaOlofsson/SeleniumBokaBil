@@ -32,7 +32,7 @@ SetupBrowser
 
 #Login And Logout
 I log in to rental
-    [Documentation]     Logs in on Rental Website
+    [Documentation]     Logs in on Rental Website. Tests Requirement from header that successful login shows welcome message.
     [Tags]      Login   VG_Test
     [Arguments]     ${userEmail}    ${userPassword}
     Input Text    //input[@id='email']      ${userEmail}
@@ -51,6 +51,7 @@ I Log Out
     [Documentation]     Logs out from rental
     [Tags]      Logout      VG_Test
     Click Element    //button[@id='logout']
+    Wait Until Element Is Visible    //button[@id='login']
 
 I make sure I am logged in
     [Documentation]     Checks if logged in, Logs in if false.
@@ -70,14 +71,14 @@ I am at startpage
 
 #Select Dates
 I Select Dates
-    [Documentation]     choose dates to rent car
+    [Documentation]     Choose dates to rent car.
     [Tags]      SelectDate      VG_Test
     Input Text    //input[@id='start']    0228
     Click Element    //input[@id='end']
     Input Text    //input[@id='end']    0303
 
 Search for selected dates are visible
-    [Documentation]     verifies that the entered timeperiod is shown
+    [Documentation]     Verifies that the entered timeperiod is shown.
     [Tags]      verifyDateSelection
     Click Element    //button[@id='continue']
     Page Should Contain    2024-02-28 – 2024-03-03
@@ -167,7 +168,7 @@ Alert Should be presented
     Alert Should Be Present
 
 I Attempt login with wrong Email
-    [Documentation]     Attempt to log in to rental with an invalid Email should produce an error message
+    [Documentation]     Attempt to log in to rental with an invalid Email
     [Tags]      WrongEmail
     [Arguments]     ${WrongEmail}   ${userPassword}
     Input Text    //input[@id='email']    ${WrongEmail}
